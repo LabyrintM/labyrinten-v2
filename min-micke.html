@@ -2,49 +2,52 @@
 <html lang="sv">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Min Micke</title>
 <style>
 body {
 font-family: Georgia, serif;
-background-color: #f2e7c9;
-text-align: center;
+background-color: #f9f9f9;
 padding: 40px;
-}
-img {
-width: 80%;
-max-width: 600px;
-margin-top: 30px;
+color: #1a1a1a;
 }
 hr {
 border: none;
-border-top: 2px solid black;
+border-top: 2px solid #000;
 margin: 40px 0;
+}
+h2 {
+font-size: 1.5em;
+}
+.hidden {
+display: none;
+}
+input, button {
+padding: 8px;
+font-size: 16px;
+margin-top: 10px;
+}
+img {
+width: 100%;
+max-width: 400px;
+margin: 30px 0;
+}
+.spotify {
+margin: 30px 0;
 }
 </style>
 </head>
 <body>
-
-<p><strong>Vilken grej som Johanna serverat tyckte du va godast?</strong></p>
+<h2>Vilken grej som Johanna serverat tyckte du va godast?</h2>
 <input type="text" id="answer" placeholder="Skriv ditt svar här..." />
 <button onclick="checkAnswer()">Skicka</button>
 
-<script>
-function checkAnswer() {
-const input = document.getElementById('answer').value.trim().toLowerCase();
-if (input === 'fattiga riddare') {
-document.getElementById('content').style.display = 'block';
-} else {
-alert('Fel svar. Försök igen.');
-}
-}
-</script>
-
-<div id="content" style="display: none;">
+<div id="content" class="hidden">
 <hr />
 
+<!-- Spotify-låten -->
+<div class="spotify">
 <iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/0OdUWJ0sBjDrqHygGUXeCF?utm_source=generator&theme=0"
+src="https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY?utm_source=generator&theme=0"
 width="80%"
 height="152"
 frameborder="0"
@@ -52,17 +55,33 @@ allowfullscreen=""
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 loading="lazy">
 </iframe>
-
-<img src="IMG_4412.jpeg" alt="Micke flexar vid datorn" />
-
-<p><br>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
-<p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
-<p>Att du alltid kommer vara allt annat än fasaden du visar.<br>
-Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
-<p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
-
-<p><strong><br>Fortsättning följer…</strong></p>
 </div>
 
+<!-- Bild på Micke -->
+<img src="din-bild.jpg" alt="Bild på Micke" />
+
+<!-- Text -->
+<p>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
+
+<p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
+
+<p>Att du alltid kommer vara allt annat än fasaden du visar.<br />
+Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
+
+<p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
+
+<p><strong>Fortsättning följer…</strong></p>
+</div>
+
+<script>
+function checkAnswer() {
+const input = document.getElementById('answer').value.trim().toLowerCase();
+if (input === "fattiga riddare") {
+document.getElementById('content').classList.remove('hidden');
+} else {
+alert("Fel svar. Försök igen.");
+}
+}
+</script>
 </body>
 </html>
