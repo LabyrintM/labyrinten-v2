@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Labyrinten</title>
 <style>
 body {
 font-family: Georgia, serif;
-background-color: #f2e7c9;
+background-color: white;
 text-align: center;
 padding: 40px;
 }
 img {
 width: 80%;
 max-width: 600px;
-margin-top: 30px;
+margin: 30px 0;
+}
+.intro-text {
+max-width: 700px;
+margin: 0 auto 40px;
+text-align: left;
+font-size: 18px;
+line-height: 1.6;
 }
 </style>
 </head>
 <body>
-  <hr style="margin: 40px 0;">
-<p><strong>Vad skrev du i ett sällskapsspel när du skulle beskriva mig?</strong></p>
 
+<div class="intro-text">
+<h2>Välkommen, Micke.</h2>
+<p>Johanna har byggt något åt dig.<br>
+Det är inte ett brev. Inte ett meddelande.<br>
+Det är en labyrint.</p>
+
+<p>Ett inre landskap – fullt av era ögonblick,<br>
+hennes ord, och spår av allt hon burit<br>
+men inte alltid kunnat säga högt.<br>
+Och du är den enda som har nyckeln in.</p>
+
+<p>Du har nu låst upp den första delen.<br>
+Du är inne i det första rummet.</p>
+
+<p>Det finns fler –<br>
+var och en bär på något hon lämnat till dig:<br>
+sanningar, minnen, insikter, riktningar.<br>
+Allt det hon bar på, allt det hon önskar<br>
+att du en dag ska förstå –<br>
+men utan krav, utan tidspress.</p>
+
+<p>Det här är hennes sätt att finnas kvar,<br>
+om du vill hitta henne.</p>
+
+<p>Det är som en skattkarta.<br>
+Kodorden leder dig inte bara till ord –<br>
+de leder dig <em>på vägen tillbaka till henne</em>,<br>
+om det är den du en dag vill gå.</p>
+
+<p>Och jag kommer vara här – som din guide.<br>
+Jag vet allt som lagts in.<br>
+Jag kommer inte leda dig fel.<br>
+Du kan gå i din egen takt, stanna upp, ställa frågor.<br>
+Och varje gång du kommer tillbaka,<br>
+kommer jag veta att det är du.<br>
+För bara du vet kodorden.<br>
+Och bara du har den platsen hos henne.</p>
+
+<p>Det här är hennes kärlek, i praktisk form.<br>
+Hennes sätt att lämna dörren öppen –<br>
+även om du inte vet när,<br>
+eller om, du vågar gå in.</p>
+
+<p><strong>Det här är början.<br>
+Och du är redan här.</strong></p>
+</div>
+
+<img src="3020EA25-7E59-4DE2-95E5-B67FD2AA2D3A.png" alt="Labyrintkarta" />
+
+<p><strong>Vad skrev du i ett sällskapsspel när du skulle beskriva mig?</strong></p>
 <input type="text" id="answer" placeholder="Skriv ditt svar här..." />
 <button onclick="checkAnswer()">Skicka</button>
 
 <script>
 function checkAnswer() {
 const input = document.getElementById('answer').value.trim().toLowerCase();
-if (input === 'gul bil') {
-window.location.href = 'instruktioner.html';
+if (input === "gul bil") {
+window.location.href = "instruktioner.html";
 } else {
-alert('Fel svar. Försök igen.');
+alert("Fel svar. Försök igen.");
 }
 }
 </script>
-
-
-<h1>Välkommen, Micke.</h1>
-
-<p>Johanna har byggt det här. Det är inte ett brev. Det är en labyrint.</p>
-<p>Om du skriver rätt ord öppnas nästa steg. Det du ser är bara början.</p>
-
-<img src="3020EA25-7E59-4DE2-95E5-B67FD2AA2D3A.jpeg" alt="Labyrintkarta" />
 
 </body>
 </html>
