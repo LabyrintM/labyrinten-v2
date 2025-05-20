@@ -1,73 +1,65 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Min Micke</title>
 <style>
 body {
 font-family: Georgia, serif;
-background-color: #f9f9f9;
-padding: 40px;
+background-color: #ffffff;
 color: #1a1a1a;
+padding: 40px;
+line-height: 1.6;
+}
+h2 {
+font-size: 1.3em;
 }
 hr {
 border: none;
-border-top: 2px solid #000;
+border-top: 2px solid #000000;
 margin: 40px 0;
 }
-h2 {
-font-size: 1.5em;
+input, button {
+padding: 10px;
+font-size: 16px;
+margin-top: 10px;
 }
 .hidden {
 display: none;
 }
-input, button {
-padding: 8px;
-font-size: 16px;
-margin-top: 10px;
-}
-img {
-width: 100%;
-max-width: 400px;
+.spotify {
 margin: 30px 0;
 }
-.spotify {
+img {
+max-width: 400px;
+width: 100%;
 margin: 30px 0;
 }
 </style>
 </head>
 <body>
+
 <h2>Vilken grej som Johanna serverat tyckte du va godast?</h2>
 <input type="text" id="answer" placeholder="Skriv ditt svar här..." />
 <button onclick="checkAnswer()">Skicka</button>
 
-<div id="content" class="hidden">
+<div id="result" class="hidden">
 <hr />
 
-<!-- Spotify-låten -->
 <div class="spotify">
 <iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY?utm_source=generator&theme=0"
-width="80%"
-height="152"
-frameborder="0"
-allowfullscreen=""
+src="https://open.spotify.com/embed/track/0HqZX76SFLDz2aW8aiqi7G?utm_source=generator"
+width="100%" height="152" frameborder="0" allowfullscreen=""
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy">
-</iframe>
+loading="lazy"></iframe>
 </div>
 
-<!-- Bild på Micke -->
-<img src="din-bild.jpg" alt="Bild på Micke" />
+<img src="IMG_4311.jpeg" alt="Micke flexar vid datorn" />
 
-<!-- Text -->
 <p>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
-
 <p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
-
-<p>Att du alltid kommer vara allt annat än fasaden du visar.<br />
+<p>Att du alltid kommer vara allt annat än fasaden du visar.<br>
 Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
-
 <p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
 
 <p><strong>Fortsättning följer…</strong></p>
@@ -75,13 +67,14 @@ Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt kill
 
 <script>
 function checkAnswer() {
-const input = document.getElementById('answer').value.trim().toLowerCase();
-if (input === "fattiga riddare") {
-document.getElementById('content').classList.remove('hidden');
+const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+if (userAnswer === 'fattiga riddare') {
+document.getElementById('result').classList.remove('hidden');
 } else {
-alert("Fel svar. Försök igen.");
+alert('Fel svar, prova igen.');
 }
 }
 </script>
+
 </body>
 </html>
