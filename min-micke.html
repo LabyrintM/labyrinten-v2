@@ -5,37 +5,26 @@
 <title>Min Micke</title>
 <style>
 body {
+background-color: white;
+color: black;
 font-family: Georgia, serif;
-background-color: #ffffff;
-color: #1a1a1a;
 text-align: center;
 padding: 40px;
 }
-input, button {
-padding: 10px;
-font-size: 16px;
-margin-top: 10px;
-}
-.hidden {
-display: none;
-}
 hr {
-border: none;
-border-top: 2px solid #000000;
+border: 1px solid black;
 margin: 40px auto;
 width: 60%;
 }
-img {
-max-width: 400px;
-width: 100%;
+.spotify-embed, img, .text-block, form {
 margin: 30px auto;
-}
-.spotify {
-margin: 30px 0;
-}
-p {
 max-width: 600px;
-margin: 20px auto;
+}
+img {
+width: 100%;
+height: auto;
+}
+.text-block {
 line-height: 1.6;
 }
 </style>
@@ -43,40 +32,44 @@ line-height: 1.6;
 <body>
 
 <h2>Vilken grej som Johanna serverat tyckte du va godast?</h2>
+<form id="quizForm">
 <input type="text" id="answer" placeholder="Skriv ditt svar här..." />
-<button onclick="checkAnswer()">Skicka</button>
+<button type="submit">Skicka</button>
+</form>
 
-<div id="result" class="hidden">
-<hr />
+<div id="result" style="display: none;">
+<hr>
 
-<div class="spotify">
+<div class="spotify-embed">
 <iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/0HqZX76SFLDz2aW8aiqi7G?utm_source=generator"
-width="100%" height="152" frameborder="0" allowfullscreen=""
+src="https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY?utm_source=generator"
+width="100%" height="152" frameBorder="0" allowfullscreen
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 loading="lazy"></iframe>
 </div>
 
 <img src="IMG_4311.jpeg" alt="Micke flexar vid datorn" />
 
+<div class="text-block">
 <p>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
 <p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
 <p>Att du alltid kommer vara allt annat än fasaden du visar.<br>
 Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
 <p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
-
 <p><strong>Fortsättning följer…</strong></p>
+</div>
 </div>
 
 <script>
-function checkAnswer() {
-const input = document.getElementById("answer").value.trim().toLowerCase();
-if (input === "fattiga riddare") {
-document.getElementById("result").classList.remove("hidden");
+document.getElementById('quizForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const input = document.getElementById('answer').value.trim().toLowerCase();
+if (input === 'fattiga riddare') {
+document.getElementById('result').style.display = 'block';
 } else {
-alert("Fel svar, prova igen.");
+alert('Fel svar, prova igen.');
 }
-}
+});
 </script>
 
 </body>
