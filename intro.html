@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labyrinten</title>
+<style>
+body {
+font-family: Georgia, serif;
+background-color: #f2e7c9;
+text-align: center;
+padding: 40px;
+}
+img {
+width: 80%;
+max-width: 600px;
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+  <hr style="margin: 40px 0;">
+<p><strong>Vad skrev du i ett sällskapsspel när du skulle beskriva mig?</strong></p>
+
+<input type="text" id="answer" placeholder="Skriv ditt svar här..." />
+<button onclick="checkAnswer()">Skicka</button>
+
+<script>
+function checkAnswer() {
+const input = document.getElementById('answer').value.trim().toLowerCase();
+if (input === 'gul bil') {
+window.location.href = 'instruktioner.html';
+} else {
+alert('Fel svar. Försök igen.');
+}
+}
+</script>
+
+
+<h1>Välkommen, Micke.</h1>
+
+<p>Johanna har byggt det här. Det är inte ett brev. Det är en labyrint.</p>
+<p>Om du skriver rätt ord öppnas nästa steg. Det du ser är bara början.</p>
+
+<img src="3020EA25-7E59-4DE2-95E5-B67FD2AA2D3A.jpeg" alt="Labyrintkarta" />
+
+</body>
+</html>
