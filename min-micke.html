@@ -7,90 +7,62 @@
 <style>
 body {
 font-family: Georgia, serif;
-background-color: white;
-color: black;
+background-color: #f2e7c9;
 text-align: center;
 padding: 40px;
 }
-input {
-padding: 10px;
-font-size: 16px;
-width: 280px;
-margin-top: 10px;
-}
-button {
-padding: 10px 20px;
-font-size: 16px;
-margin-left: 10px;
-cursor: pointer;
+img {
+width: 80%;
+max-width: 600px;
+margin-top: 30px;
 }
 hr {
 border: none;
 border-top: 2px solid black;
 margin: 40px 0;
 }
-iframe {
-margin-top: 20px;
-}
-img {
-margin-top: 30px;
-width: 60%;
-max-width: 400px;
-}
-.text-block {
-margin-top: 30px;
-white-space: pre-line;
-text-align: left;
-max-width: 700px;
-margin-left: auto;
-margin-right: auto;
-font-size: 17px;
-}
-.follow-up {
-margin-top: 40px;
-font-style: italic;
-}
 </style>
 </head>
 <body>
 
-<h2>Vilken grej som Johanna serverat tyckte du va godast?</h2>
+<p><strong>Vilken grej som Johanna serverat tyckte du va godast?</strong></p>
 <input type="text" id="answer" placeholder="Skriv ditt svar här..." />
 <button onclick="checkAnswer()">Skicka</button>
-
-<div id="result" style="display:none;">
-<hr />
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Fi3kVrUdORjB3CrX2H29G?utm_source=generator"
-width="100%" height="152" frameborder="0" allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-</iframe>
-
-<img src="IMG_4311.jpeg" alt="Micke flexar" />
-
-<div class="text-block">
-Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.
-
-Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.
-
-Att du alltid kommer vara allt annat än fasaden du visar.
-Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.
-
-Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.
-</div>
-
-<div class="follow-up">Fortsättning följer...</div>
-</div>
 
 <script>
 function checkAnswer() {
 const input = document.getElementById('answer').value.trim().toLowerCase();
-if (input === "fattiga riddare") {
-document.getElementById('result').style.display = 'block';
+if (input === 'fattiga riddare') {
+document.getElementById('content').style.display = 'block';
 } else {
-alert("Fel svar. Försök igen.");
+alert('Fel svar. Försök igen.');
 }
 }
 </script>
+
+<div id="content" style="display: none;">
+<hr />
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/track/0OdUWJ0sBjDrqHygGUXeCF?utm_source=generator&theme=0"
+width="80%"
+height="152"
+frameborder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+loading="lazy">
+</iframe>
+
+<img src="IMG_4412.jpeg" alt="Micke flexar vid datorn" />
+
+<p><br>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
+<p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
+<p>Att du alltid kommer vara allt annat än fasaden du visar.<br>
+Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
+<p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
+
+<p><strong><br>Fortsättning följer…</strong></p>
+</div>
 
 </body>
 </html>
