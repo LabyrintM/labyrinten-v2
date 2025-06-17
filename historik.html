@@ -4,78 +4,191 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8" />
 
-  <title>Historik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
+<title>Historik</title>
 
-    body {
+<style>
 
-      font-family: sans-serif;
+  body {
 
-      background-color: #fdfdfd;
+    font-family: Arial, sans-serif;
 
-      margin: 40px;
+    max-width: 800px;
 
-    }
+    margin: 20px auto;
 
-    .container {
+    padding: 0 10px;
 
-      display: flex;
+  }
 
-      align-items: center;
+  h2 {
 
-    }
+    text-align: center;
 
-    .container img {
+    margin-bottom: 40px;
 
-      max-width: 40%;
+  }
 
-      height: auto;
+  .container {
 
-      margin-right: 40px;
+    display: flex;
 
-    }
+    align-items: center;
 
-    .text {
+  }
 
-      font-size: 1.2em;
+  .container img {
 
-      max-width: 50%;
+    height: 200px;
 
-    }
+    margin-right: 20px;
 
-    .rubrik {
+  }
 
-      font-size: 2em;
+  .text {
 
-      font-weight: bold;
+    flex: 1;
 
-      margin-bottom: 30px;
+    font-size: 18px;
 
-    }
+    text-align: center;
 
-  </style>
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 200px;
+
+  }
+
+  #content {
+
+    display: none;
+
+  }
+
+  #error {
+
+    color: red;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+  }
+
+  label, input, button {
+
+    display: block;
+
+    margin: 10px auto;
+
+    font-size: 18px;
+
+  }
+
+  input {
+
+    padding: 6px 10px;
+
+    width: 250px;
+
+    text-align: center;
+
+  }
+
+  button {
+
+    padding: 8px 20px;
+
+    cursor: pointer;
+
+  }
+
+</style>
 
 </head>
 
 <body>
 
-  <div class="rubrik">Höjdpunkter ur tidernas evighetskonversation</div>
+
+
+<h2>Höjdpunkter ur tidernas evighetskonversation</h2>
+
+
+
+<form id="riddleForm">
+
+  <label for="answer">Vad lyckas Johanna varje dag via text locka fram hos dig?</label>
+
+  <input type="text" id="answer" autocomplete="off" />
+
+  <button type="submit">Skicka</button>
+
+  <div id="error"></div>
+
+</form>
+
+
+
+<div id="content">
 
   <div class="container">
 
-    <img src="upload/forsta_screenshot.jpg" alt="Första screenshot">
+    <img src="screenshot1.jpg.jpg" alt="Screenshot" />
 
-    <div class="text">
-
-      <p>Bilden talar för sig själv, bff forever!</p>
-
-    </div>
+    <p class="text">Bilden talar för sig själv, bff forever!</p>
 
   </div>
+
+</div>
+
+
+
+<script>
+
+  const form = document.getElementById('riddleForm');
+
+  const answerInput = document.getElementById('answer');
+
+  const errorDiv = document.getElementById('error');
+
+  const contentDiv = document.getElementById('content');
+
+
+
+  form.addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const answer = answerInput.value.trim().toLowerCase();
+
+    if (answer === 'ett leende') {
+
+      errorDiv.textContent = '';
+
+      form.style.display = 'none';
+
+      contentDiv.style.display = 'block';
+
+    } else {
+
+      errorDiv.textContent = 'Fel svar, försök igen.';
+
+    }
+
+  });
+
+</script>
+
+
 
 </body>
 
 </html>
+
