@@ -55,7 +55,7 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
 
 <p><strong>Här är rummen:</strong></p>
 <ol>
-<li><a href="historia.html">Historia</a></li>
+<li><a href="#" onclick="checkAnswer('historik.html', 'ett leende', 'Vad lyckas Johanna varje dag via text locka fram hos dig?')">Historia</a></li>
 <li><a href="pippi.html">Pippi</a></li>
 <li><a href="min-kompis.html">Min kompis</a></li>
 <li><a href="orimligheten.html">Orimligheten</a></li>
@@ -73,9 +73,11 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
 Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
 <script>
 
-  function checkAnswer(filename, correctAnswer) {
+ <script>
 
-    var answer = prompt("Kärt barn har många namn, vad är Viggos mest använda?");
+  function checkAnswer(filename, correctAnswer, questionText) {
+
+    var answer = prompt(questionText);
 
     if (answer && answer.toLowerCase().trim() === correctAnswer.toLowerCase()) {
 
@@ -83,7 +85,7 @@ Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
 
     } else {
 
-      alert("Fel svar. Försök igen.");
+      alert("Fel svar. Försök igen!");
 
     }
 
