@@ -4,113 +4,61 @@
 
 <head>
 
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historik</title>
 
-<title>Historik</title>
+  <style>
 
-<style>
+    body {
 
-  body {
+      font-family: Arial, sans-serif;
 
-    font-family: Arial, sans-serif;
+      background-color: #fefefe;
 
-    max-width: 800px;
+      padding: 40px;
 
-    margin: 20px auto;
+    }
 
-    padding: 0 10px;
+    h1 {
 
-  }
+      text-align: center;
 
-  h2 {
+      margin-bottom: 60px;
 
-    text-align: center;
+    }
 
-    margin-bottom: 40px;
+    .entry {
 
-  }
+      display: flex;
 
-  .container {
+      align-items: center;
 
-    display: flex;
+      margin-bottom: 40px;
 
-    align-items: center;
+    }
 
-  }
+    .entry img {
 
-  .container img {
+      width: 300px;
 
-    height: 200px;
+      height: auto;
 
-    margin-right: 20px;
+      margin-right: 30px;
 
-  }
+      border-radius: 8px;
 
-  .text {
+    }
 
-    flex: 1;
+    .entry-text {
 
-    font-size: 18px;
+      font-size: 20px;
 
-    text-align: center;
+      font-weight: 500;
 
-    display: flex;
+    }
 
-    align-items: center;
-
-    justify-content: center;
-
-    height: 200px;
-
-  }
-
-  #content {
-
-    display: none;
-
-  }
-
-  #error {
-
-    color: red;
-
-    text-align: center;
-
-    margin-top: 10px;
-
-  }
-
-  label, input, button {
-
-    display: block;
-
-    margin: 10px auto;
-
-    font-size: 18px;
-
-  }
-
-  input {
-
-    padding: 6px 10px;
-
-    width: 250px;
-
-    text-align: center;
-
-  }
-
-  button {
-
-    padding: 8px 20px;
-
-    cursor: pointer;
-
-  }
-
-</style>
+  </style>
 
 </head>
 
@@ -118,77 +66,20 @@
 
 
 
-<h2>Höjdpunkter ur tidernas evighetskonversation</h2>
+  <h1>Höjdpunkter ur tidernas evighetskonversation</h1>
 
 
 
-<form id="riddleForm">
+  <div class="entry">
 
-  <label for="answer">Vad lyckas Johanna varje dag via text locka fram hos dig?</label>
+    <img src="första%20skreenshot.jpeg" alt="Första screenshot">
 
-  <input type="text" id="answer" autocomplete="off" />
-
-  <button type="submit">Skicka</button>
-
-  <div id="error"></div>
-
-</form>
-
-
-
-<div id="content">
-
-  <div class="container">
-
-    <img src="screenshot1.jpg.jpg" alt="Screenshot" />
-
-    <p class="text">Bilden talar för sig själv, bff forever!</p>
+    <div class="entry-text">Bilden talar för sig själv, bff forever!</div>
 
   </div>
-
-</div>
-
-
-
-<script>
-
-  const form = document.getElementById('riddleForm');
-
-  const answerInput = document.getElementById('answer');
-
-  const errorDiv = document.getElementById('error');
-
-  const contentDiv = document.getElementById('content');
-
-
-
-  form.addEventListener('submit', function(e) {
-
-    e.preventDefault();
-
-    const answer = answerInput.value.trim().toLowerCase();
-
-    if (answer === 'ett leende') {
-
-      errorDiv.textContent = '';
-
-      form.style.display = 'none';
-
-      contentDiv.style.display = 'block';
-
-    } else {
-
-      errorDiv.textContent = 'Fel svar, försök igen.';
-
-    }
-
-  });
-
-</script>
 
 
 
 </body>
 
 </html>
-
