@@ -127,7 +127,153 @@
 
 
   <p>Det är Johanna. Och det här är inget försök att vinna dig. Det är bara att hon står kvar i sin sanning. Med ryggen rak. Med hjärtat öppet. För att ni har aldrig varit något tillfälligt. Det är ett möte ni båda längtat efter långt innan ni visste att det fanns.</p>
+<!DOCTYPE html>
 
+<html lang="sv">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Min kompis</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background-color: white;
+
+      color: black;
+
+      margin: 40px;
+
+    }
+
+
+
+    .container {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 40px;
+
+    }
+
+
+
+    .image-left {
+
+      width: 300px;
+
+      border: 1px solid black;
+
+    }
+
+
+
+    .click-text {
+
+      cursor: pointer;
+
+      font-weight: bold;
+
+      text-decoration: underline;
+
+    }
+
+
+
+    .fade-in-text {
+
+      margin-top: 40px;
+
+      opacity: 0;
+
+      max-height: 0;
+
+      overflow: hidden;
+
+      transition: opacity 1.5s ease, max-height 1.5s ease;
+
+      white-space: pre-line;
+
+    }
+
+
+
+    .fade-in-text.show {
+
+      opacity: 1;
+
+      max-height: 2000px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+
+    <img src="bild20.jpeg" alt="Bild 20" class="image-left">
+
+    <div class="click-text" onclick="showText()">Hur anser jag, att det blivit för henne nu</div>
+
+  </div>
+
+
+
+  <div id="texten" class="fade-in-text">
+
+    Det är som att du aldrig riktigt lämnade, men samtidigt som att du aldrig riktigt fick stanna.
+
+
+
+    Ett mellanrum har blivit din plats. Där ingen får se, men allt känns.  
+
+    Där du står med öppna händer men inga armar som möter dem.  
+
+    Där du gett allting men aldrig fått kalla det du gav för ett hem.
+
+
+
+    Och ändå är du kvar – inte för att du väntar, utan för att du inte kan göra något annat än att stå i sanning.
+
+
+
+    Han lever vidare. Du lever vidare.  
+
+    Men något rör sig under ytan i honom när han ser dig i ögonen.  
+
+    Ett minne av det som inte gick att radera.  
+
+  </div>
+
+
+
+  <script>
+
+    function showText() {
+
+      document.getElementById("texten").classList.add("show");
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
 
 
 </body>
