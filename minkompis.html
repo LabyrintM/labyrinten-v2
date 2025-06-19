@@ -127,147 +127,160 @@
 
 
   <p>Det är Johanna. Och det här är inget försök att vinna dig. Det är bara att hon står kvar i sin sanning. Med ryggen rak. Med hjärtat öppet. För att ni har aldrig varit något tillfälligt. Det är ett möte ni båda längtat efter långt innan ni visste att det fanns.</p>
-<!DOCTYPE html>
+<div style="display: flex; align-items: flex-start; margin-top: 50px;">
 
-<html lang="sv">
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <title>Min kompis</title>
-
-  <style>
-
-    body {
-
-      font-family: Arial, sans-serif;
-
-      background-color: white;
-
-      color: black;
-
-      margin: 40px;
-
-    }
+  <img src="bild20.jpeg" alt="Bild på Johanna" style="max-width: 300px; margin-right: 20px;">
 
 
 
-    .container {
+  <div>
 
-      display: flex;
+    <h3 onclick="toggleText()" style="cursor: pointer; color: #444; text-decoration: underline;">
 
-      align-items: center;
+      Hur anser jag att det blivit för henne nu?
 
-      gap: 40px;
+    </h3>
 
-    }
+    <div id="hiddenText" style="display: none; opacity: 0; transition: opacity 1.5s ease; max-width: 600px;">
 
+      <p><strong>För henne är detta inte ett avsked från en relation.</strong><br>
 
-
-    .image-left {
-
-      width: 300px;
-
-      border: 1px solid black;
-
-    }
+      Det är ett avsked från en plats i henne där hon för första gången varit helt levande.</p>
 
 
 
-    .click-text {
+      <p>Hon är inte kvar för att hon hoppas.<br>
 
-      cursor: pointer;
+      Hon är inte fast för att hon väntar.<br>
 
-      font-weight: bold;
-
-      text-decoration: underline;
-
-    }
+      Hon är kvar för att hon <strong>funnit sitt hem</strong> i något hon inte visste gick att hitta i en annan människa.</p>
 
 
 
-    .fade-in-text {
+      <p>Och när det rivs upp –<br>
 
-      margin-top: 40px;
+      när det måste stängas,<br>
 
-      opacity: 0;
+      när kroppen skriker fast munnen är tyst –<br>
 
-      max-height: 0;
+      då känns det inte som ett uppbrott.<br>
 
-      overflow: hidden;
+      Då känns det som en amputation.<br>
 
-      transition: opacity 1.5s ease, max-height 1.5s ease;
+      <strong>En livsnerv som klipps.</strong><br>
 
-      white-space: pre-line;
-
-    }
+      Inte för att hon håller fast. Utan för att det var på riktigt.</p>
 
 
 
-    .fade-in-text.show {
+      <p>Det är därför hon inte hittar orden.<br>
 
-      opacity: 1;
+      Därför allt är bedövat.<br>
 
-      max-height: 2000px;
-
-    }
-
-  </style>
-
-</head>
-
-<body>
+      För kroppen har inte hittat något språk för att lämna något den inte trodde gick att förlora.</p>
 
 
 
-  <div class="container">
+      <p>När <strong>du</strong> säger <em>"Jag saknar framtiden med dig"</em> –<br>
 
-    <img src="bild20.jpeg" alt="Bild 20" class="image-left">
+      då säger du egentligen:<br>
 
-    <div class="click-text" onclick="showText()">Hur anser jag, att det blivit för henne nu</div>
+      <strong>"Jag vet att det här aldrig riktigt kommer sluta i mig."</strong><br>
+
+      För du har börjat förstå det hon redan vet:</p>
+
+
+
+      <p>Att det här inte var en episod.<br>
+
+      Det var inte passion eller kris.<br>
+
+      Det var <strong>ett hem</strong>.</p>
+
+
+
+      <p>Och hon har redan förlikat sig med det –<br>
+
+      att <strong>det inte finns någon annan</strong>.<br>
+
+      Inte av dramatik.<br>
+
+      Inte av lojalitet.<br>
+
+      Utan för att <strong>det inte behövs någon annan</strong>.</p>
+
+
+
+      <p>För att du är platsen hon redan gått in i med hela sig –<br>
+
+      inte som en gäst,<br>
+
+      utan som någon som bar med sig nyckeln redan innan ni möttes.</p>
+
+
+
+      <p>Så när ni nu båda känner att det är dags –<br>
+
+      så är det inte <strong>viljan som drar er isär</strong>.<br>
+
+      Det är världen. Livet. Strukturen. Ansvar. Rädsla.</p>
+
+
+
+      <p>Men hon vet att känslan inte lämnar kroppen bara för att handen gör det.</p>
+
+
+
+      <p>Därför är hon bedövad.<br>
+
+      Därför känns allt som en dröm.<br>
+
+      <strong>För det ni har är för verkligt för att försvinna på det här sättet.</strong></p>
+
+
+
+      <p>Och ändå gör det det.</p>
+
+
+
+      <p>Men hon är inte trasig.<br>
+
+      Hon är inte vilsen.<br>
+
+      Hon är <strong>en hel människa som har älskat sant</strong>.<br>
+
+      Och det sätter spår som aldrig kan raderas.</p>
+
+    </div>
 
   </div>
 
-
-
-  <div id="texten" class="fade-in-text">
-
-    Det är som att du aldrig riktigt lämnade, men samtidigt som att du aldrig riktigt fick stanna.
+</div>
 
 
 
-    Ett mellanrum har blivit din plats. Där ingen får se, men allt känns.  
+<script>
 
-    Där du står med öppna händer men inga armar som möter dem.  
+  function toggleText() {
 
-    Där du gett allting men aldrig fått kalla det du gav för ett hem.
+    const textDiv = document.getElementById("hiddenText");
 
+    if (textDiv.style.display === "none") {
 
+      textDiv.style.display = "block";
 
-    Och ändå är du kvar – inte för att du väntar, utan för att du inte kan göra något annat än att stå i sanning.
+      setTimeout(() => {
 
+        textDiv.style.opacity = "1";
 
-
-    Han lever vidare. Du lever vidare.  
-
-    Men något rör sig under ytan i honom när han ser dig i ögonen.  
-
-    Ett minne av det som inte gick att radera.  
-
-  </div>
-
-
-
-  <script>
-
-    function showText() {
-
-      document.getElementById("texten").classList.add("show");
+      }, 10);
 
     }
 
-  </script>
+  }
+
+</script>
+
 
 
 
