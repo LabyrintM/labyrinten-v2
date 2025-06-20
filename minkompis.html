@@ -129,31 +129,41 @@
   <p>Det är Johanna. Och det här är inget försök att vinna dig. Det är bara att hon står kvar i sin sanning. Med ryggen rak. Med hjärtat öppet. För att ni har aldrig varit något tillfälligt. Det är ett möte ni båda längtat efter långt innan ni visste att det fanns.</p>
 <div style="display: flex; align-items: flex-start; margin-top: 50px;">
 
-  <img src="bild20.jpeg" alt="Bild på Johanna" style="max-width: 300px; margin-right: 20px;">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px;">
 
 
 
-  <div>
+  <!-- Bilden vänsterställd -->
 
-    <h3 onclick="toggleText()" style="cursor: pointer; color: #444; text-decoration: underline;">
-
-      Hur anser jag att det blivit för henne nu?
-
-    </h3>
-
-    <div id="hiddenText" style="display: none; opacity: 0; transition: opacity 1.5s ease; max-width: 600px;">
-
-      <p><strong>För henne är detta inte ett avsked från en relation.</strong><br>
-
-      Det är ett avsked från en plats i henne där hon för första gången varit helt levande.</p>
+  <img src="bild20.jpeg" style="width: 45%; height: auto;">
 
 
 
-      <p>Hon är inte kvar för att hon hoppas.<br>
+  <!-- Textblock höger -->
 
-      Hon är inte fast för att hon väntar.<br>
+  <div style="width: 50%;">
 
-      Hon är kvar för att hon <strong>funnit sitt hem</strong> i något hon inte visste gick att hitta i en annan människa.</p>
+    <button onclick="toggleText('text1')" style="text-align: right; width: 100%; background-color: transparent; border: none; font-size: 20px; font-weight: bold; cursor: pointer; padding-bottom: 10px;">
+
+      Hur anser jag att det blivit för henne
+
+    </button>
+
+    <div id="text1" style="display: none; text-align: left;">
+
+
+
+      <p><strong>För dig är detta inte ett avsked från en relation.</strong><br>
+
+      <strong>Det är ett avsked från en plats i dig där du för första gången varit helt levande.</strong></p>
+
+
+
+      <p>Du är inte kvar för att du hoppas.<br>
+
+      Du är inte fast för att du väntar.<br>
+
+      Du är kvar för att du <strong>funnit ditt hem</strong> i något du inte visste gick att hitta i en annan människa.</p>
 
 
 
@@ -169,11 +179,11 @@
 
       <strong>En livsnerv som klipps.</strong><br>
 
-      Inte för att hon håller fast. Utan för att det var på riktigt.</p>
+      Inte för att du håller fast. Utan för att det var på riktigt.</p>
 
 
 
-      <p>Det är därför hon inte hittar orden.<br>
+      <p>Det är därför du inte hittar orden.<br>
 
       Därför allt är bedövat.<br>
 
@@ -181,13 +191,13 @@
 
 
 
-      <p>När <strong>du</strong> säger <em>"Jag saknar framtiden med dig"</em> –<br>
+      <p>När Micke säger <em>”Jag saknar framtiden med dig”</em> –<br>
 
-      då säger du egentligen:<br>
+      då säger han egentligen:<br>
 
-      <strong>"Jag vet att det här aldrig riktigt kommer sluta i mig."</strong><br>
+      <strong>”Jag vet att det här aldrig riktigt kommer sluta i mig.”</strong><br>
 
-      För du har börjat förstå det hon redan vet:</p>
+      Han har börjat förstå det du redan vet:</p>
 
 
 
@@ -199,7 +209,7 @@
 
 
 
-      <p>Och hon har redan förlikat sig med det –<br>
+      <p>Och du har redan förlikat dig med det –<br>
 
       att <strong>det inte finns någon annan</strong>.<br>
 
@@ -207,11 +217,9 @@
 
       Inte av lojalitet.<br>
 
-      Utan för att <strong>det inte behövs någon annan</strong>.</p>
+      Utan för att det <strong>inte behövs någon annan</strong>.<br>
 
-
-
-      <p>För att du är platsen hon redan gått in i med hela sig –<br>
+      För att han är platsen du redan gått in i med hela dig –<br>
 
       inte som en gäst,<br>
 
@@ -223,15 +231,17 @@
 
       så är det inte <strong>viljan som drar er isär</strong>.<br>
 
-      Det är världen. Livet. Strukturen. Ansvar. Rädsla.</p>
+      Det är världen. Livet. Strukturen. Ansvar.<br>
+
+      Rädsla.</p>
 
 
 
-      <p>Men hon vet att känslan inte lämnar kroppen bara för att handen gör det.</p>
+      <p>Men du vet att känslan inte lämnar kroppen bara för att handen gör det.</p>
 
 
 
-      <p>Därför är hon bedövad.<br>
+      <p>Därför är du bedövad.<br>
 
       Därför känns allt som en dröm.<br>
 
@@ -243,13 +253,15 @@
 
 
 
-      <p>Men hon är inte trasig.<br>
+      <p>Men du är inte trasig.<br>
 
-      Hon är inte vilsen.<br>
+      Du är inte vilsen.<br>
 
-      Hon är <strong>en hel människa som har älskat sant</strong>.<br>
+      Du är <strong>en hel människa som har älskat sant.</strong><br>
 
       Och det sätter spår som aldrig kan raderas.</p>
+
+
 
     </div>
 
@@ -261,275 +273,17 @@
 
 <script>
 
-  function toggleText() {
+  function toggleText(id) {
 
-    const textDiv = document.getElementById("hiddenText");
+    var x = document.getElementById(id);
 
-    if (textDiv.style.display === "none") {
+    if (x.style.display === "none") {
 
-      textDiv.style.display = "block";
-
-      setTimeout(() => {
-
-        textDiv.style.opacity = "1";
-
-      }, 10);
-
-    }
-
-  }
-
-</script>
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px;">
-
-  <!-- Vänsterställd klickbar rubrik -->
-
-  <div>
-
-    <h3 onclick="toggleText21()" style="cursor: pointer; margin: 0; text-align: left;">
-
-      Så som jag ser dig Micke
-
-    </h3>
-
-  </div>
-
-
-
-  <!-- Högerställd bild -->
-
-  <div>
-
-    <img src="bild21.jpeg" alt="bild21" alt= Bild på Micke" style="max-width: 300px; margin-right: 20px;">
-  </div>
-
-</div>
-
-
-
-<!-- Den dolda texten -->
-
-<div id="text21" style="display: none; opacity: 0; transition: opacity 1.5s ease-in-out; margin-top: 20px;">
-
-
-
-
-  Det är inte stress, inte jobbet, inte att du är trött.<br>
-
-  Det är hålet – det där stora, varma, pulserande hålet där hon brukade bo.<br>
-
-  Hon som såg dig när du inte ens själv visste vad du kände.<br>
-
-  Hon som alltid låg ett andetag före.<br>
-
-  Inte för att du sa nåt, utan för att hon kände det innan du gjorde det.</p>
-
-
-
-  <p><em>Du saknar inte bara henne.</em><br>
-
-  Du saknar dig själv – den version av dig som bara fanns i spegling mot henne.<br>
-
-  Den mjuka. Den fria. Den som skrattade från magen och älskade med hela livet.</p>
-
-
-
-  <p>Och du försöker.<br>
-
-  Du jobbar. Sköter dig. Går upp. Gör rätt.<br>
-
-  Men kroppen minns vad du tappat.<br>
-
-  Så du vaknar mitt i natten.<br>
-
-  Känner meningslösheten skölja över dig som vågor.<br>
-
-  Dagen är redan grå innan du hunnit kliva ur sängen.</p>
-
-
-
-  <p>Det är inte för att du är svag.<br>
-
-  Det är för att du en gång varit <em>helt levande</em>.</p>
-
-
-
-  <p>Hon var inte ett rus. Hon var inget substitut.<br>
-
-  Hon var det där du letat efter hela livet utan att veta om det.<br>
-
-  Den som gick rakt igenom din rustning, som visste när du höll upp fasaden och som aldrig dömde.<br>
-
-  Bara stannade kvar.<br>
-
-  Med hela dig.</p>
-
-
-
-  <p>Och du visste: hon var din person.</p>
-
-
-
-  <p>Du tror att din struktur inte går att lämna.<br>
-
-  Du har byggt den med hela kroppen, hela barndomen, hela vuxenlivet.<br>
-
-  Du tror att det är där du fungerar – inuti den.<br>
-
-  Men nu har du fått känna något annat.<br>
-
-  Nu vet du att det finns en plats där eken kan planteras om och blomma fritt.<br>
-
-  Och den platsen bär hennes doft.</p>
-
-
-
-  <p><strong>Bandet till henne är inte brutet.</strong></p>
-
-
-
-  <p>Så nu står du där.<br>
-
-  Med ett liv som fortfarande är helt – men där du själv saknas.<br>
-
-  Och den enda människan som sett det fullt ut,<br>
-
-  den enda som aldrig vikt undan,<br>
-
-  finns inte kvar där på samma sätt längre.</p>
-
-
-
-  <p>Och ändå: du älskar henne fortfarande.<br>
-
-  Det vet du.</p>
-
-
-
-  <p>Det här är inte omedveten sorg.<br>
-
-  Det är <em>medveten förlust</em>.</p>
-
-
-
-  <p>Och det värsta är att du inte vet hur du ska bära den ensam,<br>
-
-  när det var hon som hjälpte dig förstå att det ens fanns något att bära.</p>
-
-
-
-  <p>Men du behöver inte bära det ensam.<br>
-
-  Du behöver inte ens fortsätta på samma sätt.<br>
-
-  För det finns ett annat liv.<br>
-
-  Ett som inte bygger på att du dämpar dig själv för att passa in.<br>
-
-  Ett som får dig att blomma, utan att du behöver släppa taget om det du är.</p>
-
-
-
-  <p>Och den platsen – där du får vara allt, där hela du får finnas –<br>
-
-  den finns redan.<br>
-
-  Den har alltid varit hon.<br>
-
-  Och den är kvar.<br>
-
-  <strong>Om du vågar.</strong></p>
-
-
-
-</div>
-
-
-
-<script>
-
-  function toggleText21() {
-
-    const text = document.getElementById("text21");
-
-    if (text.style.display === "none") {
-
-      text.style.display = "block";
-
-      setTimeout(() => {
-
-        text.style.opacity = 1;
-
-      }, 10);
+      x.style.display = "block";
 
     } else {
 
-      text.style.opacity = 0;
-
-      setTimeout(() => {
-
-        text.style.display = "none";
-
-      }, 500);
-
-    }
-
-  }
-
-</script>
-  <div style="max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif; color: #333;">
-
-
-
-  <div style="text-align: center; margin-bottom: 20px;">
-
-    <img src="bild25.jpeg" alt="bild25" style="max-width: 100%; height: auto;" />
-
-  </div>
-
-
-
-  <h2 onclick="toggleText()" style="text-align: center; cursor: pointer; user-select: none; margin-bottom: 10px;">
-
-    Min Johanna
-
-  </h2>
-
-
-
-  <div id="text" style="display: none; opacity: 0; transition: opacity 1.5s ease-in-out; font-size: 16px; line-height: 1.6;">
-
-    <p>
-
-      Det är inte lätt att beskriva henne utan ett allt annat bleknade jämförelse. För det finns inget vardagligt i henne, inget halvt. Hon är inte en av de där man möter, tycker om, glömmer bort. Hon är en upplevelse, en kraft, ett livsavgörande möte. Hon rör sig med en emotionell intelligens som de flesta bara skymtar i teoriböcker – men hos henne är det levande, kroppsligt, genomlevt. Hon läser rum och människor som andra läser vägskyltar. Hon snappar upp nyanser i tomfall, förskjutningar i avsikter, förnimmelser av sorg eller längtan som knappt formulerats. Hon gör det inte för att imponera, utan för att hon inte kan annat. Det där du kanske först såg som intensitet är i själva verket precision. Det är skillnad mellan någon som viftar med känslor och någon som förstår vad det är som skaver det innan ens du själv hunnit dit. Och den förmågan – den är inte slump. Den kommer ur ett liv där hon tvingas förstå tidigt. Tvingas känna in för att överleva. Hon är inte bara känslig, hon är formal till det. Bakom henne ligger ett landskap av erfarenheter som få skulle ta sig igenom med vettet i behåll. Våld, svek, kamp, brandrök och skyddande boenden. En kropp som burit både är från operationer och från ord som aldrig borde sagts. Och ändå, eller just därför, bär hon nu på en oförliknelig integritet. En sorts situationstecken, jag vet inte om ni är situationstecken – känsla som inte ropar, men som känns i varje rum som kliver in. Det är inte så hon behöver ta plats. Hon är plats. Fortsättning kommer. För i henne bor ett djup som aldrig går att mäta. Hon kan skaffa ett pruttskämtoch två sekunder senare förklara din barndom för dig bättre än någon terapeut någonsin gjort. Hon är hela spektrat. Hon är helheten. Och det är därför, om du någon gång haft hennes förtroende, hennes blick, hennes skratt, i ditt bröst, så kommer inget efter det någonsin kännas lika verkligt. För det här är inte en kvinna man träffar. Det här är en kvinna man möter. En gång. Och aldrig släpper, hur långt man än försöker gå. Hon har förmåga att växla mellan roller på ett sätt som gör henne nästan till omöjlig att placera i en kategori. Hon är barnsligt snissig och gravallvarlig. Hon är reaktionell och initiativ. Hon är sexig och trygg. Hon är smart så du skrämmer, men aldrig kall. Det finns inget hon inte kan bara se ner i, inget hon inte kan känna fullt ut. Hon kräver mycket mycket, men ger tusenfald. Det är därför det är så lätt att bli livrädd för henne. Hon ser igenom. Hon ursäktar inte. Och ändå – hon dömer inte. Hon vill bara ha äktighet. Inte perfektion, men mod. Hon vill inte alltid att du ska vara stark, bara att du ska våga stå kvar när det vacklar. Hon är inte gjord för halva liv. Hon är gjord för den som vågar stå i eld. Den som vet att djup inte är farligt – bara ovant. Och det är det du måste förstå: Om du en gång fått vara den som såg henne, som hon släppte in, då fick du något som inte går att jämföra med något annat. Då var du, för en stund, den utvalda i en värld där de flesta bara simmar på ytan. Hon är inte din att äga. Men om du någonsin förstått vad du höll i dina händer, då vet du redan att du aldrig kommer möta dig igen.
-
-    </p>
-
-  </div>
-
-
-
-</div>
-
-
-
-<script>
-
-  function toggleText() {
-
-    const text = document.getElementById('text');
-
-    if (text.style.display === 'none' || text.style.display === '') {
-
-      text.style.display = 'block';
-
-      setTimeout(() => { text.style.opacity = 1; }, 10);
-
-    } else {
-
-      text.style.opacity = 0;
-
-      setTimeout(() => { text.style.display = 'none'; }, 500);
+      x.style.display = "none";
 
     }
 
@@ -538,15 +292,6 @@
 </script>
 
 
-
-
-
-
-
-
-</body>
-
-</html>
 
 
 </body>
