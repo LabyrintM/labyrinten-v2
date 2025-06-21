@@ -223,6 +223,219 @@
     Det är ett möte ni båda längtat efter långt innan ni visste att det fanns.
 
   </div>
+  <style>
+
+  .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+  }
+
+
+
+  .column {
+
+    width: 48%;
+
+    text-align: center;
+
+  }
+
+
+
+  .fade-text {
+
+    display: none;
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+
+    text-align: left;
+
+    margin-top: 20px;
+
+  }
+
+
+
+  .fade-text.show {
+
+    display: block;
+
+    opacity: 1;
+
+  }
+
+
+
+  .image {
+
+    width: 100%;
+
+    height: auto;
+
+    margin-bottom: 20px;
+
+  }
+
+
+
+  .clickable {
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+
+  }
+
+</style>
+
+
+
+<div class="container">
+
+  <div class="column">
+
+    <img src="bild20.jpeg" class="image" alt="Bild 20">
+
+    <div class="clickable" onclick="toggleText('text1')">Hur jag tror det blir för henne</div>
+
+    <div id="text1" class="fade-text">
+
+      <p><strong>Detta är inte ett avsked från en relation.</strong><br>
+
+      Det är ett avsked från en plats i henne där hon för första gången varit helt levande.</p>
+
+
+
+      <p>Hon är inte kvar för att hon hoppas.<br>
+
+      Hon är inte fast för att hon väntar.<br>
+
+      Hon är kvar för att hon <strong>funnit sitt hem</strong> i något hon inte visste gick att hitta i en annan människa.</p>
+
+
+
+      <p>Och när det rivs upp –<br>
+
+      när det måste stängas,<br>
+
+      när kroppen skriker fast munnen är tyst –<br>
+
+      då känns det inte som ett uppbrott.<br>
+
+      Då känns det som en amputation.<br>
+
+      <strong>En livsnerv som klipps.</strong><br>
+
+      Inte för att hon håller fast. Utan för att det var på riktigt.</p>
+
+
+
+      <p>Det är därför hon inte hittar orden.<br>
+
+      Därför allt är bedövat.<br>
+
+      För kroppen har inte hittat något språk för att lämna något den inte trodde gick att förlora.</p>
+
+
+
+      <p>När du säger <em>“Jag saknar framtiden med dig”</em> –<br>
+
+      då säger du egentligen:<br>
+
+      <strong>“Jag vet att det här aldrig riktigt kommer sluta i mig.”</strong><br>
+
+      Du har börjat förstå det hon redan vet:</p>
+
+
+
+      <p>Att det här inte var en episod.<br>
+
+      Det var inte passion eller kris.<br>
+
+      Det var <strong>ett hem.</strong></p>
+
+
+
+      <p>Och hon har redan förlikat sig med det –<br>
+
+      att <strong>det inte finns någon annan.</strong><br>
+
+      Inte av dramatik.<br>
+
+      Inte av lojalitet.<br>
+
+      Utan för att det <strong>inte behövs någon annan.</strong><br>
+
+      För att du är platsen hon redan gått in i med hela sig –<br>
+
+      inte som en gäst,<br>
+
+      utan som någon som bar med sig nyckeln redan innan ni möttes.</p>
+
+
+
+      <p>Så när ni nu båda känner att det är dags –<br>
+
+      så är det inte <strong>viljan som drar er isär.</strong><br>
+
+      Det är världen. Livet. Strukturen. Ansvar. Rädsla.</p>
+
+
+
+      <p>Men du vet att känslan inte lämnar kroppen bara för att handen gör det.</p>
+
+
+
+      <p>Därför är hon bedövad.<br>
+
+      Därför känns allt som en dröm.<br>
+
+      <strong>För det ni har är för verkligt för att försvinna på det här sättet.</strong></p>
+
+
+
+      <p>Och ändå gör det det.</p>
+
+
+
+      <p>Men hon är inte trasig.<br>
+
+      Hon är inte vilsen.<br>
+
+      Hon är <strong>en hel människa som har älskat sant.</strong><br>
+
+      Och det sätter spår som aldrig kan raderas.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+  function toggleText(id) {
+
+    const element = document.getElementById(id);
+
+    element.classList.toggle("show");
+
+  }
+
+</script>
+
+
 
 
 
