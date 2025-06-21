@@ -144,6 +144,14 @@
 
   <meta charset="UTF-8">
 
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+
+  <meta charset="UTF-8">
+
   <title>Min kompis – Bild20</title>
 
   <style>
@@ -154,59 +162,95 @@
 
       color: white;
 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
       margin: 0;
 
-      padding: 40px;
+      padding: 0;
+
+      display: flex;
+
+      flex-direction: row;
+
+      align-items: flex-start;
+
+      height: 100vh;
 
     }
 
 
 
-    .rubrik {
+    .left {
 
-      text-align: right;
+      width: 50%;
 
-      margin-bottom: 30px;
+      display: flex;
 
-    }
+      align-items: center;
 
+      justify-content: center;
 
-
-    .rubrik a {
-
-      color: white;
-
-      text-decoration: none;
-
-      font-size: 22px;
+      padding: 2vh;
 
     }
 
 
 
-    .text-container {
+    .left img {
+
+      max-width: 90%;
+
+      height: auto;
+
+    }
+
+
+
+    .right {
+
+      width: 50%;
+
+      text-align: center;
+
+      padding: 4vh 4vw;
+
+    }
+
+
+
+    .clickable-title {
+
+      font-size: 1.5em;
+
+      font-weight: 500;
+
+      cursor: pointer;
+
+      border-bottom: 1px solid white;
+
+      display: inline-block;
+
+    }
+
+
+
+    .text-content {
+
+      margin-top: 4vh;
 
       opacity: 0;
 
-      animation: fadeIn 2.5s ease-in-out forwards;
+      transition: opacity 2s ease-in;
 
       white-space: pre-wrap;
-
-      line-height: 1.6;
 
     }
 
 
 
-    @keyframes fadeIn {
+    .text-content.show {
 
-      to {
-
-        opacity: 1;
-
-      }
+      opacity: 1;
 
     }
 
@@ -216,105 +260,97 @@
 
 <body>
 
+  <div class="left">
 
-
-  <div class="rubrik">
-
-    <a href="#">Hur jag anser att det blivit för henne</a>
+    <img src="bild20.jpg" alt="Bild20">
 
   </div>
 
 
 
-  <div class="text-container">
+  <div class="right">
 
-Detta är inte ett avsked från en relation.  
+    <div class="clickable-title" onclick="showText()">Hur jag anser att det blivit för henne</div>
+
+    <div class="text-content" id="fadeText">
+
+Detta är inte ett avsked från en relation.
 
 Det är ett avsked från en plats i henne där hon för första gången varit helt levande.
 
 
 
-Hon är inte kvar för att hon hoppas.  
+Hon är inte kvar för att hon hoppas.
 
-Hon är inte fast för att hon väntar.  
+Hon är inte fast för att hon väntar.
 
 Hon är kvar för att hon funnit sitt hem i något hon inte visste gick att hitta i en annan människa.
 
 
 
-Och när det rivs upp –  
+Och när det rivs upp –
 
-när det måste stängas,  
+när det måste stängas,
 
-när kroppen skriker fast munnen är tyst –  
+när kroppen skriker fast munnen är tyst –
 
-då känns det inte som ett uppbrott.  
+då känns det inte som ett uppbrott.
 
-Då känns det som en amputation.  
+Då känns det som en amputation.
 
-En livsnerv som klipps.  
+En livsnerv som klipps.
 
-Inte för att hon håller fast.  
-
-Utan för att det var på riktigt.
+Inte för att hon håller fast. Utan för att det var på riktigt.
 
 
 
-Det är därför hon inte hittar orden.  
+Det är därför hon inte hittar orden.
 
-Därför allt är bedövat.  
+Därför allt är bedövat.
 
 För kroppen har inte hittat något språk för att lämna något den inte trodde gick att förlora.
 
 
 
----
+När du säger “Jag saknar framtiden med dig” –
 
+då säger du egentligen:
 
-
-När du säger “Jag saknar framtiden med dig” –  
-
-då säger du egentligen:  
-
-“Jag vet att det här aldrig riktigt kommer sluta i mig.”  
+“Jag vet att det här aldrig riktigt kommer sluta i mig.”
 
 Du har börjat förstå det hon redan vet:
 
 
 
-Att det här inte var en episod.  
+Att det här inte var en episod.
 
-Det var inte passion eller kris.  
+Det var inte passion eller kris.
 
 Det var ett hem.
 
 
 
-Och hon har redan förlikat sig med det –  
+Och hon har redan förlikat sig med det –
 
-att det inte finns någon annan.  
+att det inte finns någon annan.
 
-Inte av dramatik.  
+Inte av dramatik.
 
-Inte av lojalitet.  
+Inte av lojalitet.
 
-Utan för att det inte behövs någon annan.  
+Utan för att det inte behövs någon annan.
 
-För att du är platsen hon redan gått in i med hela sig –  
+För att du är platsen hon redan gått in i med hela sig –
 
-inte som en gäst,  
+inte som en gäst,
 
 utan som någon som bar med sig nyckeln redan innan ni möttes.
 
 
 
----
+Så när ni nu båda känner att det är dags –
 
-
-
-Så när ni nu båda känner att det är dags –  
-
-så är det inte viljan som drar er isär.  
+så är det inte viljan som drar er isär.
 
 Det är världen. Livet. Strukturen. Ansvar. Rädsla.
 
@@ -324,9 +360,9 @@ Men du vet att känslan inte lämnar kroppen bara för att handen gör det.
 
 
 
-Därför är hon bedövad.  
+Därför är hon bedövad.
 
-Därför känns allt som en dröm.  
+Därför känns allt som en dröm.
 
 För det ni har är för verkligt för att försvinna på det här sättet.
 
@@ -336,21 +372,37 @@ Och ändå gör det det.
 
 
 
-Men hon är inte trasig.  
+Men hon är inte trasig.
 
-Hon är inte vilsen.  
+Hon är inte vilsen.
 
-Hon är en hel människa som har älskat sant.  
+Hon är en hel människa som har älskat sant.
 
 Och det sätter spår som aldrig kan raderas.
+
+    </div>
 
   </div>
 
 
 
+  <script>
+
+    function showText() {
+
+      document.getElementById('fadeText').classList.add('show');
+
+    }
+
+  </script>
+
 </body>
 
 </html>
+
+
+
+
 
 
 
