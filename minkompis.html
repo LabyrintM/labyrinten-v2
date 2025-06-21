@@ -129,46 +129,122 @@
   <p>Det är Johanna. Och det här är inget försök att vinna dig. Det är bara att hon står kvar i sin sanning. Med ryggen rak. Med hjärtat öppet. För att ni har aldrig varit något tillfälligt. Det är ett möte ni båda längtat efter långt innan ni visste att det fanns.</p>
 <div style="display: flex; align-items: flex-start; margin-top: 50px;">
 
-<div style="display: flex; align-items: flex-start; margin-bottom: 50px;">
-
   <img src="bild20.jpg" alt="Bild 20" style="width: 300px; margin-right: 40px;">
 
 
+<html lang="sv">
 
-  <div style="flex-grow: 1;">
-    <div style="display: flex; align-items: flex-start; margin-bottom: 50px;">
+<head>
 
-  <img src="bild20.jpg" alt="Bild 20" style="width: 300px; margin-right: 40px;">
+  <meta charset="UTF-8">
+
+  <title>Min kompis</title>
+
+  <style>
+
+    body {
+
+      background-color: #000;
+
+      color: #fff;
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+
+      margin: 0;
+
+      padding: 20px;
+
+    }
 
 
 
-  <div style="flex-grow: 1;">
+    .image-container {
 
- <!-- Översta bilden -->
+      display: flex;
 
-<img src="bild20.jpg" alt="Bild 20" style="width: 300px; margin-right: 40px;" />
+      justify-content: center;
 
+      margin-bottom: 40px;
 
-
-<!-- Behåll flex-layout om det redan finns -->
-
-<div style="flex-grow: 1;">
+    }
 
 
 
-  <!-- Klickbar rubrik -->
+    .image-container img {
 
-  <div onclick="visaTexten()" style="cursor: pointer; font-weight: bold; text-align: center; font-size: 22px; margin-top: 40px;">
+      width: 300px;
 
-    Hur jag anser att det blivit för henne
+      height: auto;
+
+    }
+
+
+
+    .clickable-heading {
+
+      text-align: right;
+
+      cursor: pointer;
+
+      font-weight: bold;
+
+      font-size: 22px;
+
+      margin-bottom: 20px;
+
+      color: #fff;
+
+    }
+
+
+
+    .fade-text {
+
+      opacity: 0;
+
+      max-height: 0;
+
+      overflow: hidden;
+
+      transition: opacity 1.5s ease, max-height 1.5s ease;
+
+      white-space: pre-line;
+
+      margin-top: 20px;
+
+    }
+
+
+
+    .fade-text.show {
+
+      opacity: 1;
+
+      max-height: 5000px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <div class="image-container">
+
+    <img src="bilder/Bild20.jpeg" alt="Bild 20">
 
   </div>
 
 
 
-  <!-- Själva texten, osynlig först -->
+  <div class="clickable-heading" onclick="toggleText()">Hur jag anser att det blivit för henne</div>
 
-  <div id="textblock" style="opacity: 0; transition: opacity 2s ease; margin-top: 30px;">
+
+
+  <div id="textContainer" class="fade-text">
 
 
 
@@ -224,19 +300,19 @@
 
     Det var inte passion eller kris.<br>
 
-    Det var <strong>ett hem.</strong></p>
+    Det var <strong>ett hem</strong>.</p>
 
 
 
     <p>Och hon har redan förlikat sig med det –<br>
 
-    att <strong>det inte finns någon annan.</strong><br>
+    att <strong>det inte finns någon annan</strong>.<br>
 
     Inte av dramatik.<br>
 
     Inte av lojalitet.<br>
 
-    Utan för att det <strong>inte behövs någon annan.</strong><br>
+    Utan för att det <strong>inte behövs någon annan</strong>.<br>
 
     För att du är platsen hon redan gått in i med hela sig –<br>
 
@@ -248,7 +324,7 @@
 
     <p>Så när ni nu båda känner att det är dags –<br>
 
-    så är det inte <strong>viljan som drar er isär.</strong><br>
+    så är det inte <strong>viljan som drar er isär</strong>.<br>
 
     Det är världen. Livet. Strukturen. Ansvar. Rädsla.</p>
 
@@ -282,34 +358,22 @@
 
   </div>
 
-</div>
+
+
+  <script>
+
+    function toggleText() {
+
+      const container = document.getElementById("textContainer");
+
+      container.classList.toggle("show");
+
+    }
+
+  </script>
 
 
 
-<!-- Scriptet som gör att texten visas -->
+</body>
 
-<script>
-
-  function visaTexten() {
-
-    document.getElementById('textblock').style.opacity = "1";
-
-  }
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+</html>
