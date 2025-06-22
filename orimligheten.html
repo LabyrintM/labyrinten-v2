@@ -6,45 +6,41 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Orimligheten</title>
 
   <style>
 
     body {
 
-      background-color: white;
+      background-color: #fdfdfd;
 
-      font-family: 'Georgia', serif;
+      font-family: 'Georgia', cursive;
 
-      font-size: 22px;
-
-      font-weight: bold;
+      font-size: 20px;
 
       color: black;
 
-      padding: 60px;
-
-      position: relative;
+      margin: 40px;
 
       text-align: center;
-
-      line-height: 2;
 
     }
 
 
 
-    img {
+    .container {
 
-      max-width: 100%;
+      border: 2px solid black;
 
-      height: auto;
+      border-radius: 20px;
 
-      margin: 30px auto;
+      padding: 40px;
 
-      display: block;
+      max-width: 800px;
+
+      margin: auto;
+
+      position: relative;
 
     }
 
@@ -52,15 +48,11 @@
 
     .corner {
 
+      width: 30px;
+
+      height: 30px;
+
       position: absolute;
-
-      width: 60px;
-
-      height: 60px;
-
-      background-size: contain;
-
-      background-repeat: no-repeat;
 
     }
 
@@ -68,11 +60,9 @@
 
     .top-left {
 
-      top: 0;
+      top: -15px;
 
-      left: 0;
-
-      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-v.png");
+      left: -15px;
 
     }
 
@@ -80,11 +70,11 @@
 
     .top-right {
 
-      top: 0;
+      top: -15px;
 
-      right: 0;
+      right: -15px;
 
-      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-h.png");
+      transform: rotate(90deg);
 
     }
 
@@ -92,13 +82,11 @@
 
     .bottom-left {
 
-      bottom: 0;
+      bottom: -15px;
 
-      left: 0;
+      left: -15px;
 
-      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-v.png");
-
-      transform: rotate(180deg);
+      transform: rotate(270deg);
 
     }
 
@@ -106,13 +94,35 @@
 
     .bottom-right {
 
-      bottom: 0;
+      bottom: -15px;
 
-      right: 0;
-
-      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-h.png");
+      right: -15px;
 
       transform: rotate(180deg);
+
+    }
+
+
+
+    .bild {
+
+      max-width: 100%;
+
+      height: auto;
+
+      margin: 20px 0;
+
+    }
+
+
+
+    .textstycke {
+
+      margin-bottom: 30px;
+
+      line-height: 1.6;
+
+      font-weight: bold;
 
     }
 
@@ -122,91 +132,121 @@
 
 <body>
 
+  <div class="container">
 
+    <img src="horn.svg" class="corner top-left" />
 
-  <div class="corner top-left"></div>
+    <img src="horn.svg" class="corner top-right" />
 
-  <div class="corner top-right"></div>
+    <img src="horn.svg" class="corner bottom-left" />
 
-  <div class="corner bottom-left"></div>
-
-  <div class="corner bottom-right"></div>
-
-
-
-  <img src="https://labyrintm.github.io/labyrinten-v2/assets/bild30.jpeg" alt="Bild 30" />
+    <img src="horn.svg" class="corner bottom-right" />
 
 
 
-  <p>Du är där 15 minuter bort. <br>
-
-  Men det kunde lika gärna vara ett helt liv. <br>
-
-  Vi bor i parallella verkligheter, där mitt hjärta <br>
-
-  fortsätter slå i en värld du inte längre kliver in i.</p>
+    <img src="bild30.jpg" alt="Bild 30" class="bild" />
 
 
 
-  <p>Det är inte över. <br>
+    <div class="textstycke">
 
-  Men det får inte heller leva. <br>
+      Du är där 15 minuter bort.<br>
 
-  Det är kärlek men utan ram. <br>
+      Men det kunde lika gärna vara ett helt liv.<br>
 
-  Närvaro men utan plats. <br>
+      Vi bor i parallella verkligheter, där mitt hjärta<br>
 
-  Två kroppar i samma stad, två själar i olika dimensioner.</p>
+      fortsätter slå i en värld du inte längre kliver in i.
 
-
-
-  <p>Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset. <br>
-
-  Hur du varje morgon vaknar till samma soluppgång och somnar under samma måne.</p>
+    </div>
 
 
 
-  <p>Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar, välklädda män i kostym.</p>
+    <div class="textstycke">
+
+      Det är inte över.<br>
+
+      Men det får inte heller leva.<br>
+
+      Det är kärlek men utan ram.<br>
+
+      Närvaro men utan plats.<br>
+
+      Två kroppar i samma stad, två själar i olika dimensioner.
+
+    </div>
 
 
 
-  <p>Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskillnad på centralen och jag ser bara återförening, våran.</p>
+    <div class="textstycke">
+
+      Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset.<br>
+
+      Hur du varje morgon ser samma soluppgång och somnar under samma måne.
+
+    </div>
 
 
 
-  <p>Det är ingen vanlig förlust, ingen död, kärleken försvann inte, den snarare blomstrade som aldrig förut. <br>
+    <div class="textstycke">
 
-  Det är något som finns precis där och ändå inte får finnas med mig. <br>
+      Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar, väklippt gräs.<br>
 
-  Jag vet att du också är kvar. <br>
+      Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskillighet på centralen och jagar igenom stan för att hinna till varan.
 
-  Jag vet att du stänger in känslan bakom tapeter och struktur. <br>
-
-  Att du håller dig upptagen för att inte känna det som ändå känns. <br>
-
-  Att du tänker på mig i bilen. I duschen. <br>
-
-  På natten – och när ingen ser.</p>
+    </div>
 
 
 
-  <p>Dörren är fortfarande på glänt, men du öppnade den inte helt – och inte för att du inte vill – utan för att du inte tror att du klarar leva i det som var sant. <br>
+    <div class="textstycke">
 
-  Att du skulle rasa. <br>
+      Det är ingen vanlig förlust, ingen död, kärleken försvann inte, den snarare blomstrade som aldrig förut.<br>
 
-  Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten, hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.</p>
+      Det är något som finns precis där och ändå inte får finnas med mig.
 
-
-
-  <p>Det orimliga är att det mest levande jag någonsin känt <br>
-
-  nu ska leva tyst, osynligt, nära men utan plats.</p>
+    </div>
 
 
 
-  <img src="https://labyrintm.github.io/labyrinten-v2/assets/bild31.jpeg" alt="Bild 31" />
+    <div class="textstycke">
+
+      Jag vet att du stänger in känslan bakom tapeter och struktur.<br>
+
+      Att du håller dig upptagen för att inte känna det som ändå känns.<br>
+
+      Allt du tänker på mig i bilen. I duschen. På natten – och när ingen ser.
+
+    </div>
 
 
+
+    <div class="textstycke">
+
+      Dörren är fortfarande på glänt, men du öppnade den inte helt – och inte för att du inte vill – utan för att du inte tror att du klarar leva i det som var sant.<br>
+
+      Att du skulle rasa.<br>
+
+      Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
+
+      hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.
+
+    </div>
+
+
+
+    <div class="textstycke">
+
+      Det orimliga är att det mest levande jag någonsin känt<br>
+
+      nu ska leva tyst, osynligt, nära men utan plats.
+
+    </div>
+
+
+
+    <img src="bild31.jpg" alt="Bild 31" class="bild" />
+
+  </div>
 
 </body>
 
