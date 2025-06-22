@@ -8,65 +8,99 @@
 
   <title>Orimligheten</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
   <style>
 
     body {
 
+      background-color: white;
+
       font-family: 'Dancing Script', cursive;
 
-      background-color: #f7f7f7;
-
-      padding: 40px;
-
-      text-align: center;
+      font-weight: bold;
 
       font-size: 22px;
 
-      color: #222;
+      color: black;
 
-      border: 2px solid #aaa;
-
-      border-radius: 25px;
+      text-align: center;
 
       margin: 40px;
 
+      position: relative;
+
     }
 
 
 
-    img {
+    img.main-image {
 
-      width: 100%;
+      max-width: 80%;
 
-      max-width: 600px;
+      height: auto;
 
-      margin: 30px auto 10px;
+      margin: 20px auto;
 
       display: block;
 
-      border-radius: 25px;
+    }
+
+
+
+    .corner {
+
+      position: absolute;
+
+      width: 60px;
+
+      height: 60px;
 
     }
 
 
 
-    .text-block {
+    .top-left {
 
-      margin-bottom: 70px;
+      top: 0;
+
+      left: 0;
 
     }
 
 
 
-    .bildnummer {
+    .top-right {
 
-      margin-top: 20px;
+      top: 0;
 
-      font-style: italic;
+      right: 0;
 
-      color: #555;
+      transform: scaleX(-1);
+
+    }
+
+
+
+    .bottom-left {
+
+      bottom: 0;
+
+      left: 0;
+
+      transform: scaleY(-1);
+
+    }
+
+
+
+    .bottom-right {
+
+      bottom: 0;
+
+      right: 0;
+
+      transform: scaleX(-1) scaleY(-1);
 
     }
 
@@ -78,103 +112,97 @@
 
 
 
-  <div class="text-block">
-
-    <img src="bild30.jpeg" alt="Bild 30">
-
-    <p>
-
-      Du är där 15 minuter bort.<br>
-
-      Men det kunde lika gärna vara ett helt liv.<br>
-
-      Vi bor i parallella verkligheter, där mitt hjärta<br>
-
-      fortsätter slå i en värld du inte längre kliver in i.<br><br>
+  <img src="bild30.jpeg" class="main-image">
 
 
 
-      Det är inte över.<br>
+  <p>
 
-      Men det får inte heller leva.<br>
+    Du är där 15 minuter bort.<br>
 
-      Det är kärlek men utan ram.<br>
+    Men det kunde lika gärna vara ett helt liv.<br>
 
-      Närvaro men utan plats.<br><br>
+    Vi bor i parallella verkligheter, där mitt hjärta<br>
 
-
-
-      Två kroppar i samma stad, två själar i olika dimensioner.<br><br>
+    fortsätter slå i en värld du inte längre kliver in i.<br><br>
 
 
 
-      Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset.<br>
+    Det är inte över.<br>
 
-      Hur skratt och minnesbilder skapas under samma namn.<br>
+    Men det får inte heller leva.<br>
 
-      Ser dig i precis allt som är mänskligt i affären, slitna pappor, promenader, barn.<br>
+    Det är kärlek men utan ram.<br>
 
-      Vita bilar, välkända röster.<br>
+    Närvaro men utan plats.<br>
 
-      Hör skratt och tänker genast på vårt, par som omfamnar varandra efter skilsmässa<br>
-
-      på centralen och jagar tillbaka känslan som är våran.
-
-    </p>
-
-    <p class="bildnummer">Bild 30</p>
-
-  </div>
+    Två kroppar i samma stad, två själar i olika dimensioner.<br><br>
 
 
 
-  <div class="text-block">
+    Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset.<br>
 
-    <img src="bild31.jpeg" alt="Bild 31">
-
-    <p>
-
-      Det är ingen vanlig förlust, ingen död, kärleken försvann inte,<br>
-
-      den snarare blomstrade som aldrig förut.<br>
-
-      Det är något som finns precis där och ändå inte får finnas med mig. Jag vet att du också är kvar.<br><br>
+    Hur du varje morgon vaknar till samma soluppgång och somnar under samma måne.<br><br>
 
 
 
-      Jag vet att du stänger in känslan bakom tapeter och struktur.<br>
-
-      Att du håller dig upptagen för att inte känna det som ändå känns.<br>
-
-      Att du tänker på mig i bilen. I duschen. På natten – och när ingen ser.<br><br>
+    Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar, välklädda män i kostym.<br><br>
 
 
 
-      Dörren är fortfarande på glänt, men du öppnade den inte helt –<br>
-
-      och inte för att du inte vill – utan för att du inte tror att du klarar leva i det som var sant.<br><br>
+    Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskildhet på centralen och jag ser bara återförening, våran.<br><br>
 
 
 
-      Att du skulle rasa.<br><br>
+    Det är ingen vanlig förlust, ingen död, kärleken försvann inte den snarare blomstrade som aldrig förut.<br>
+
+    Det är något som finns precis där och ändå inte får finnas med mig.<br><br>
 
 
 
-      Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
+    Jag vet att du också är kvar.<br>
 
-      hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.<br><br>
+    Jag vet att du stänger in känslan bakom tapeter och struktur.<br>
+
+    Att du håller dig upptagen för att inte känna det som ändå känns.<br>
+
+    Att du tänker på mig i bilen. I duschen. På natten och när ingen ser.<br><br>
 
 
 
-      Det orimliga är att det mest levande jag någonsin känt<br>
+    Dörren är fortfarande på glänt men du öppnade den inte helt och inte för att du inte vill.<br><br>
 
-      nu ska leva tyst, osynligt, nära men utan plats.
 
-    </p>
 
-    <p class="bildnummer">Bild 31</p>
+    Du skulle rasa.<br><br>
 
-  </div>
+
+
+    Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
+
+    hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.<br><br>
+
+
+
+    Det orimliga är att det mest levande jag någonsin känt<br>
+
+    nu ska leva tyst, osynligt, nära men utan plats.
+
+  </p>
+
+
+
+  <img src="bild31.jpeg" class="main-image">
+
+
+
+  <img src="corner.png" class="corner top-left">
+
+  <img src="corner.png" class="corner top-right">
+
+  <img src="corner.png" class="corner bottom-left">
+
+  <img src="corner.png" class="corner bottom-right">
 
 
 
