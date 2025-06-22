@@ -4,19 +4,31 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Orimligheten</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
   <style>
 
     body {
 
-      background-color: white;
+      background-color: #fdfaf7;
 
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: 'Dancing Script', cursive;
 
-      margin: 40px;
+      color: #2f2f2f;
+
+      margin: 0;
+
+      padding: 30px 10px;
+
+      display: flex;
+
+      justify-content: center;
 
     }
 
@@ -24,17 +36,67 @@
 
     .content {
 
-      border: 2px solid black;
+      max-width: 700px;
 
-      border-image: url('snirklig-hörnram.png') 30 round;
+      border: 5px solid #444;
 
-      padding: 40px;
+      border-radius: 15px;
 
-      max-width: 800px;
+      padding: 30px;
 
-      margin: auto;
+      background-color: #ffffff;
 
-      text-align: center;
+      position: relative;
+
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+      animation: fadeIn 2s ease-in-out;
+
+    }
+
+
+
+    .content::before,
+
+    .content::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 20px;
+
+      height: 20px;
+
+      border: 2px solid #444;
+
+    }
+
+
+
+    .content::before {
+
+      top: -12px;
+
+      left: -12px;
+
+      border-right: none;
+
+      border-bottom: none;
+
+    }
+
+
+
+    .content::after {
+
+      bottom: -12px;
+
+      right: -12px;
+
+      border-left: none;
+
+      border-top: none;
 
     }
 
@@ -42,19 +104,43 @@
 
     .content img {
 
+      display: block;
+
+      margin: 20px auto;
+
       max-width: 100%;
-
-      height: auto;
-
-      margin-bottom: 30px;
 
     }
 
 
 
-    .bottom-image {
+    p {
 
-      margin-top: 30px;
+      white-space: pre-line;
+
+      font-size: 1.3em;
+
+      line-height: 1.7em;
+
+      margin: 20px 0;
+
+    }
+
+
+
+    strong {
+
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes fadeIn {
+
+      from { opacity: 0; }
+
+      to { opacity: 1; }
 
     }
 
@@ -64,75 +150,135 @@
 
 <body>
 
-
-
   <div class="content">
+
+
 
     <img src="bild30.jpeg" alt="Bild 30">
 
-    
-
-    <p><em>Du är där 15 minuter bort. Men det kunde lika gärna vara ett helt liv. Vi bor i parallella verkligheter,</em><br>
-
-    <em>i en värld du inte längre kliver in i.</em></p>
 
 
+    <p><strong>Du är där 15 minuter bort.</strong>
 
-    <p><em>Det är inte över. Men det får inte heller leva. Det är kärlek men utan ram. Närvaro men utan plats.<br>
+Men det kunde lika gärna vara ett helt liv.
 
-    Två kroppar i samma stad, två själar i olika dimensioner.</em></p>
+Vi bor i parallella verkligheter, där mitt hjärta
 
+fortsätter slå i en värld du inte längre kliver
 
-
-    <p><em>Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset. Hur du varje morgon<br>
-
-    vaknar till samma soluppgång och somnar under samma måne.</em></p>
+in i.
 
 
 
-    <p><em>Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar,<br>
+Det är inte över.
 
-    välklädda män i kostym.</em></p>
+Men det får inte heller leva.
 
+Det är kärlek men utan ram.
 
+Närvaro men utan plats.
 
-    <p><em>Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskildhet<br>
+Två kroppar i samma stad, två själar i olika
 
-    på centralen och jag ser bara återförening, våran.</em></p>
-
-
-
-    <p><em>Det är ingen vanlig förlust, ingen död, kärleken försvann inte, den snarare blomstrade som aldrig förut.<br>
-
-    Det är något som finns precis där och ändå inte får finnas med mig.</em></p>
+dimensioner.
 
 
 
-    <p><em>Det är det som är sant, att du skulle rasa.<br>
+Tänker på hur du lever där borta, jobbar,
 
-    Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
+tränar, skjutsar och bygger på huset.
 
-    hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.</em></p>
+Hur du varje morgon vaknar till samma
 
+soluppgång och somnar under samma
 
-
-    <p><em>Du har inte lämnat. Dörren är fortfarande på glänt – men du öppnade den inte helt.<br>
-
-    Och inte för att du inte vill.</em></p>
+måne.
 
 
 
-    <p><em>Det orimliga är att det mest levande jag någonsin känt<br>
+Ser dig i precis allt som är, mintchoklad i
 
-    nu ska leva tyst, osynligt, nära men utan plats.</em></p>
+affären, salta pinnar, promenader, vita bilar,
+
+välklädda män i kostym.
 
 
 
-    <img src="bild31.jpeg" alt="Bild 31" class="bottom-image">
+Hör skratt och tänker genast på vårt, par
+
+som omfamnar varandra efter åtskillnad på
+
+centralen och jag ser bara återförening,
+
+våran.
+
+
+
+Det är ingen vanlig förlust, ingen död,
+
+kärleken försvann inte, den snarare
+
+blomstrade som aldrig förut.
+
+Det är något som finns precis där
+
+och ändå inte får finnas med mig.
+
+
+
+Jag vet att du också är kvar.
+
+Jag vet att du stänger in känslan bakom
+
+tapeter och struktur.
+
+Att du håller dig upptagen för att inte känna
+
+det som ändå känns.
+
+Att du tänker på mig i bilen. I duschen.
+
+På natten – och när ingen ser.
+
+
+
+Dörren är fortfarande på glänt, men du
+
+öppnade den inte helt –
+
+och inte för att du inte vill – utan för att du
+
+inte tror att du klarar leva i det som var
+
+sant.
+
+Att du skulle rasa.
+
+Samtidigt märker du hur du inte fullt ut
+
+längre tillhör den verkligheten,
+
+hur dina lungor söker den där luften, det
+
+där utrymmet där de fick andas fritt.
+
+
+
+<strong>Det orimliga är att det mest levande jag
+
+någonsin känt
+
+nu ska leva tyst, osynligt, nära men utan
+
+plats.</strong></p>
+
+
+
+    <img src="bild31.jpeg" alt="Bild 31">
+
+
 
   </div>
-
-
 
 </body>
 
