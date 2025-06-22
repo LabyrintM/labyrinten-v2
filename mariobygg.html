@@ -68,14 +68,29 @@
 
 
 
-  <audio autoplay>
+ <audio id="marioLjud" preload="auto">
 
-    <source src="mario-intro.mp3.mp3" type="audio/mpeg">
+  <source src="mario-intro.mp3.mp3" type="audio/mpeg">
 
-    Din webbläsare stöder inte ljuduppspelning.
+</audio>
 
-  </audio>
 
+
+<script>
+
+  window.addEventListener('load', function () {
+
+    var ljud = document.getElementById("marioLjud");
+
+    ljud.play().catch(function(e) {
+
+      console.log("Autoplay blockerat, kräver interaktion:", e);
+
+    });
+
+  });
+
+</script>
 
 
 </body>
