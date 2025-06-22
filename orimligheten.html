@@ -4,11 +4,11 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Orimligheten</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
 
   <style>
 
@@ -16,23 +16,35 @@
 
       background-color: white;
 
-      font-family: 'Rouge Script', cursive;
+      font-family: "Brush Script MT", cursive;
 
-      color: #7a0000;
+      font-weight: bold;
 
-      font-size: 26px;
+      font-size: 20px;
 
-      line-height: 1.8;
+      color: black;
 
-      max-width: 800px;
-
-      margin: 120px auto;
-
-      padding: 0 30px;
+      padding: 60px;
 
       position: relative;
 
       text-align: center;
+
+      line-height: 1.8;
+
+    }
+
+
+
+    img {
+
+      max-width: 100%;
+
+      height: auto;
+
+      margin: 30px auto;
+
+      display: block;
 
     }
 
@@ -42,9 +54,13 @@
 
       position: absolute;
 
-      width: 60px;
+      width: 50px;
 
-      height: 60px;
+      height: 50px;
+
+      background-size: contain;
+
+      background-repeat: no-repeat;
 
     }
 
@@ -56,6 +72,8 @@
 
       left: 0;
 
+      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-v.png");
+
     }
 
 
@@ -66,7 +84,7 @@
 
       right: 0;
 
-      transform: rotate(90deg);
+      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-h.png");
 
     }
 
@@ -78,7 +96,9 @@
 
       left: 0;
 
-      transform: rotate(270deg);
+      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-v.png");
+
+      transform: rotate(180deg);
 
     }
 
@@ -90,21 +110,9 @@
 
       right: 0;
 
+      background-image: url("https://labyrintm.github.io/labyrinten-v2/assets/horn-h.png");
+
       transform: rotate(180deg);
-
-    }
-
-
-
-    .centered-image {
-
-      display: block;
-
-      margin: 40px auto;
-
-      max-width: 100%;
-
-      height: auto;
 
     }
 
@@ -116,141 +124,103 @@
 
 
 
-  <!-- Hörn -->
+  <div class="corner top-left"></div>
 
-  <img src="hörn.png" class="corner top-left" alt="">
+  <div class="corner top-right"></div>
 
-  <img src="hörn.png" class="corner top-right" alt="">
+  <div class="corner bottom-left"></div>
 
-  <img src="hörn.png" class="corner bottom-left" alt="">
+  <div class="corner bottom-right"></div>
 
-  <img src="hörn.png" class="corner bottom-right" alt="">
 
 
+  <img src="https://labyrintm.github.io/labyrinten-v2/assets/bild30.jpeg" alt="Bild 30" />
 
-  <!-- Översta bilden -->
 
-  <img src="bild30.jpg" class="centered-image" alt="Bild 30">
 
+  <p><strong>Du är där 15 minuter bort.</strong><br>
 
+  Men det kunde lika gärna vara ett helt liv.<br>
 
-  <!-- TEXTEN -->
+  Vi bor i parallella verkligheter, där mitt hjärta<br>
 
-  <p>
+  fortsätter slå i en värld du inte längre kliver in i.</p>
 
-Du är där 15 minuter bort.
 
-Men det kunde lika gärna vara ett helt liv.
 
-Vi bor i parallella verkligheter, där mitt hjärta
+  <p>Det är inte över.<br>
 
-fortsätter slå i en värld du inte längre kliver
+  Men det får inte heller leva.<br>
 
-in i.
+  Det är kärlek men utan ram.<br>
 
+  Närvaro men utan plats.<br>
 
+  Två kroppar i samma stad, två själar i olika dimensioner.</p>
 
-Det är inte över.
 
-Men det får inte heller leva.
 
-Det är kärlek men utan ram.
+  <p>Tänker på hur du lever där borta, jobbar,<br>
 
-Närvaro men utan plats.
+  tränar, skjutsar och bygger på huset.<br>
 
-Två kroppar i samma stad, två själar i olika dimensioner.
+  Hur du varje morgon vaknar till samma soluppgång och somnar under samma måne.</p>
 
 
 
-Tänker på hur du lever där borta, jobbar,
+  <p>Ser dig i precis allt som är, mintchoklad i affären,<br>
 
-tränar, skjutsar och bygger på huset.
+  salta pinnar, promenader, vita bilar, välklädda män i kostym.</p>
 
-Hur du varje morgon vaknar till samma
 
-soluppgång och somnar under samma måne.
 
+  <p>Hör skratt och tänker genast på vårt, par<br>
 
+  som omfamnar varandra efter åtskillnad på centralen<br>
 
-Ser dig i precis allt som är, mintchoklad i
+  och jag ser bara återförening, våran.</p>
 
-affären, salta pinnar, promenader, vita bilar,
 
-välklädda män i kostym.
 
+  <p>Det är ingen vanlig förlust, ingen död,<br>
 
+  kärleken försvann inte, den snarare blomstrade som aldrig förut.<br>
 
-Hör skratt och tänker genast på vårt, par
+  Det är något som finns precis där och ändå inte får finnas med mig.</p>
 
-som omfamnar varandra efter åtskillnad på
 
-centralen och jag ser bara återförening,
 
-våran.
+  <p>Jag vet att du också är kvar.<br>
 
+  Jag vet att du stänger in känslan bakom tapeter och struktur.<br>
 
+  Att du håller dig upptagen för att inte känna det som ändå känns.<br>
 
-Det är ingen vanlig förlust, ingen död,
+  Att du tänker på mig i bilen. I duschen.<br>
 
-kärleken försvann inte, den snarare
+  På natten – och när ingen ser.</p>
 
-blomstrade som aldrig förut.
 
-Det är något som finns precis där
 
-och ändå inte får finnas med mig.
+  <p>Dörren är fortfarande på glänt, men du öppnade den inte helt –<br>
 
+  och inte för att du inte vill – utan för att du inte tror att du klarar leva i det som var sant.<br>
 
+  Att du skulle rasa.<br>
 
-Jag vet att du också är kvar.
+  Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
 
-Jag vet att du stänger in känslan bakom
+  hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.</p>
 
-tapeter och struktur.
 
-Att du håller dig upptagen för att inte känna
 
-det som ändå känns.
+  <p><br>Det orimliga är att det mest levande jag någonsin känt<br>
 
-Att du tänker på mig i bilen. I duschen.
+  nu ska leva tyst, osynligt, nära men utan plats.</p>
 
-På natten – och när ingen ser.
 
 
-
-Dörren är fortfarande på glänt, men du
-
-öppnade den inte helt –
-
-och inte för att du inte vill – utan för att du
-
-inte tror att du klarar leva i det som var
-
-sant.
-
-Att du skulle rasa.
-
-Samtidigt märker du hur du inte fullt ut
-
-längre tillhör den verkligheten,
-
-hur dina lungor söker den där luften, det
-
-där utrymmet där de fick andas fritt.
-
-
-
-Det orimliga är att det mest levande jag någonsin känt
-
-nu ska leva tyst, osynligt, nära men utan plats.
-
-  </p>
-
-
-
-  <!-- Nedersta bilden -->
-
-  <img src="bild31.jpg" class="centered-image" alt="Bild 31">
+  <img src="https://labyrintm.github.io/labyrinten-v2/assets/bild31.jpeg" alt="Bild 31" />
 
 
 
