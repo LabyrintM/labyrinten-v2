@@ -1,191 +1,140 @@
-<!-- CSS – lägg detta i <style> eller i din CSS-fil -->
+<!DOCTYPE html>
 
-<style>
+<html lang="sv">
 
-  .orimligheten-container {
+<head>
 
-    background-color: white;
+  <meta charset="UTF-8">
 
-    padding: 40px;
+  <title>Orimligheten</title>
 
-    margin: 40px auto;
+  <style>
 
-    width: 80%;
+    body {
 
-    font-family: 'Cursive', 'Georgia', serif;
+      background-color: white;
 
-    position: relative;
+      font-family: Georgia, 'Times New Roman', serif;
 
-    border: 2px solid black;
+      margin: 40px;
 
-    border-radius: 10px;
+    }
 
-  }
 
 
+    .content {
 
-  .orimligheten-container::before,
+      border: 2px solid black;
 
-  .orimligheten-container::after {
+      border-image: url('snirklig-hörnram.png') 30 round;
 
-    content: "";
+      padding: 40px;
 
-    position: absolute;
+      max-width: 800px;
 
-    width: 30px;
+      margin: auto;
 
-    height: 30px;
+      text-align: center;
 
-    border: 2px solid black;
+    }
 
-    border-radius: 30%;
 
-  }
 
+    .content img {
 
+      max-width: 100%;
 
-  .orimligheten-container::before {
+      height: auto;
 
-    top: -15px;
+      margin-bottom: 30px;
 
-    left: -15px;
+    }
 
-    border-right: none;
 
-    border-bottom: none;
 
-  }
+    .bottom-image {
 
+      margin-top: 30px;
 
+    }
 
-  .orimligheten-container::after {
+  </style>
 
-    bottom: -15px;
+</head>
 
-    right: -15px;
+<body>
 
-    border-left: none;
 
-    border-top: none;
 
-  }
+  <div class="content">
 
+    <img src="bild30.jpeg" alt="Bild 30">
 
+    
 
-  .orimligheten-image {
+    <p><em>Du är där 15 minuter bort. Men det kunde lika gärna vara ett helt liv. Vi bor i parallella verkligheter,</em><br>
 
-    display: block;
+    <em>i en värld du inte längre kliver in i.</em></p>
 
-    margin: 0 auto 30px;
 
-    max-width: 300px;
 
-  }
+    <p><em>Det är inte över. Men det får inte heller leva. Det är kärlek men utan ram. Närvaro men utan plats.<br>
 
+    Två kroppar i samma stad, två själar i olika dimensioner.</em></p>
 
 
-  .orimligheten-text {
 
-    text-align: center;
+    <p><em>Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset. Hur du varje morgon<br>
 
-    font-size: 1.1em;
+    vaknar till samma soluppgång och somnar under samma måne.</em></p>
 
-    line-height: 1.6;
 
-  }
 
-</style>
+    <p><em>Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar,<br>
 
+    välklädda män i kostym.</em></p>
 
 
-<!-- HTML – innehåll -->
 
-<div class="orimligheten-container">
+    <p><em>Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskildhet<br>
 
-  <img src="bild30.jpg" alt="Bild 30" class="orimligheten-image">
+    på centralen och jag ser bara återförening, våran.</em></p>
 
 
 
-  <div class="orimligheten-text">
+    <p><em>Det är ingen vanlig förlust, ingen död, kärleken försvann inte, den snarare blomstrade som aldrig förut.<br>
 
-    Du är där 15 minuter bort.  
+    Det är något som finns precis där och ändå inte får finnas med mig.</em></p>
 
-    Men det kunde lika gärna vara ett helt liv.  
 
-    Vi bor i parallella verkligheter, där mitt hjärta fortsätter slå i en värld du inte längre kliver in i.
 
-    <br><br>
+    <p><em>Det är det som är sant, att du skulle rasa.<br>
 
-    Det är inte över.  
+    Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,<br>
 
-    Men det får inte heller leva.  
+    hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.</em></p>
 
-    Det är kärlek men utan ram.  
 
-    Närvaro men utan plats.  
 
-    Två kroppar i samma stad, två själar i olika dimensioner.
+    <p><em>Du har inte lämnat. Dörren är fortfarande på glänt – men du öppnade den inte helt.<br>
 
-    <br><br>
+    Och inte för att du inte vill.</em></p>
 
-    Tänker på hur du lever där borta, jobbar, tränar, skjutsar och bygger på huset.  
 
-    Hur du varje morgon vaknar till samma soluppgång och somnar under samma måne.
 
-    <br><br>
+    <p><em>Det orimliga är att det mest levande jag någonsin känt<br>
 
-    Ser dig i precis allt som är, mintchoklad i affären, salta pinnar, promenader, vita bilar, välklädda män i kostym.
+    nu ska leva tyst, osynligt, nära men utan plats.</em></p>
 
-    <br><br>
 
-    Hör skratt och tänker genast på vårt, par som omfamnar varandra efter åtskildhet på centralen och jag ser bara återförening, våran.
 
-    <br><br>
-
-    Det är ingen vanlig förlust, ingen död,  
-
-    kärleken försvann inte, den snarare blomstrade som aldrig förut.  
-
-    Det är något som finns precis där  
-
-    och ändå inte får finnas med mig.
-
-    <br><br>
-
-    Jag vet att du också är kvar.  
-
-    Jag vet att du stänger in känslan bakom tapeter och struktur.  
-
-    Att du håller dig upptagen för att inte känna det som ändå känns.  
-
-    Att du tänker på mig i bilen. I duschen.  
-
-    På natten – och när ingen ser.
-
-    <br><br>
-
-    Dörren är fortfarande på glänt, men du öppnade den inte helt –  
-
-    och inte för att du inte vill – utan för att du inte tror att du klarar leva i det som var sant.  
-
-    Att du skulle rasa.  
-
-    Samtidigt märker du hur du inte fullt ut längre tillhör den verkligheten,  
-
-    hur dina lungor söker den där luften, det där utrymmet där de fick andas fritt.
-
-    <br><br>
-
-    Det orimliga är att det mest levande jag någonsin känt  
-
-    nu ska leva tyst, osynligt, nära men utan plats.
+    <img src="bild31.jpeg" alt="Bild 31" class="bottom-image">
 
   </div>
 
 
 
-  <!-- Bild31 sist -->
+</body>
 
-  <img src="bild31.jpg" alt="Bild 31" class="orimligheten-image">
+</html>
 
-</div>
