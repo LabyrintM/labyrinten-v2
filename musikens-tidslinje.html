@@ -4,7 +4,7 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <title>Musikens tidslinje</title>
 
@@ -20,57 +20,87 @@
 
       text-align: center;
 
+      margin: 0;
+
+      padding: 2em;
+
     }
+
+
 
     h1 {
 
       font-size: 2.5em;
 
-      margin-top: 40px;
+      font-weight: bold;
 
     }
 
-    .centered-img {
 
-      margin: 30px auto;
 
-      max-width: 500px;
+    img {
+
+      max-width: 600px;
 
       width: 100%;
 
+      height: auto;
+
+      margin: 2em auto;
+
+      display: block;
+
     }
 
-    .song-section {
+
+
+    .music-section {
 
       display: flex;
 
-      justify-content: center;
+      justify-content: space-between;
 
       align-items: center;
 
-      margin-top: 30px;
+      margin-top: 2em;
 
-      gap: 30px;
+      max-width: 800px;
 
-    }
+      margin-left: auto;
 
-    .song-section a {
-
-      font-size: 1.2em;
-
-      color: blue;
-
-      text-decoration: underline;
+      margin-right: auto;
 
     }
 
-    .song-section p {
 
-      margin: 0;
+
+    .left-link {
+
+      text-align: left;
+
+      flex: 1;
+
+    }
+
+
+
+    .right-text {
+
+      text-align: right;
+
+      flex: 1;
 
       font-style: italic;
 
-      font-size: 1.1em;
+    }
+
+
+
+    a {
+
+      color: #0000EE;
+
+      text-decoration: underline;
 
     }
 
@@ -82,19 +112,27 @@
 
   <h1>Musikens tidslinje</h1>
 
-  <img src="bild50.jpeg" alt="bild50" class="centered-img">
+  <img src="bild50.jpeg" alt="Bild50" />
 
 
 
-  <div class="song-section">
+  <div class="music-section">
 
-    <a href="https://www.youtube.com/watch?v=5bFQ1dRAf2I" target="_blank">
+    <div class="left-link">
 
-      Lyssna på Follow Me – Uncle Kracker
+      <a href="https://www.youtube.com/watch?v=d-_yYNwYmD0" target="_blank">
 
-    </a>
+        🎵 Follow Me – Uncle Kracker
 
-    <p>Hur rätt hade jag inte</p>
+      </a>
+
+    </div>
+
+    <div class="right-text">
+
+      Hur rätt hade jag inte?!
+
+    </div>
 
   </div>
 
@@ -103,3 +141,5 @@
 </html>
 
 Avsnitt för bifogade filer
+Förhandsgranska YouTube-videoklipp UNCLE KRACKER – FOLLOW ME (Official Music Video)
+
