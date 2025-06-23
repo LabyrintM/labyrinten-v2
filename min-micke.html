@@ -1,72 +1,270 @@
 <!DOCTYPE html>
+
 <html lang="sv">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Min Micke</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-text-align: center;
-background-color: #fdfdfd;
-margin: 30px;
-}
-hr {
-border: 1px solid black;
-margin: 30px 0;
-}
-img {
-width: 300px;
-height: auto;
-margin-top: 20px;
-}
-.text-block {
-margin-top: 20px;
-max-width: 600px;
-margin-left: auto;
-margin-right: auto;
-}
-iframe {
-margin-top: 20px;
-}
-</style>
-</head>
-<body>
-<h2>Vilken grej som Johanna serverat tyckte du va godast?</h2>
-<form id="quizForm">
-<input type="text" id="answer" placeholder="Skriv ditt svar här..." />
-<button type="submit">Skicka</button>
-</form>
 
-<div id="result" style="display: none;">
-<hr />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fp7cUfVxhlU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<img src="IMG_4311.jpeg" alt="Micke flexar vid datorn" />
-<div class="text-block">
-<p>Önskar det fanns tillräckliga ord att beskriva hur fantastisk jag tycker du är.</p>
-<p>Hur förtjust jag är i alla dina små personligheter som gömmer sig i den manligaste av kroppar.</p>
-<p>Att du alltid kommer vara allt annat än fasaden du visar.<br>
-Tanten som älskar mint, pojken som garvar åt pruttskämt och framförallt killen som tog revansch på sig själv och ändrade både det yttre som det inre.</p>
-<p>Tänk att i det korrekta, det samlade och ordnade så såg jag något helt annat.</p>
-<br>
-<p><em>Fortsättning följer…</em></p>
-</div>
-</div>
+  <meta charset="UTF-8">
 
-<script>
-document.getElementById("quizForm").addEventListener("submit", function(event) {
-event.preventDefault();
-const answer = document.getElementById("answer").value.trim().toLowerCase();
-if (answer === "fattiga riddare") {
-document.getElementById("result").style.display = "block";
-}
-});
-</script>
+  <title>Vad gömmer sig i Kinderägget?</title>
+
   <style>
 
-  
+    body {
+
+      font-family: sans-serif;
+
+      text-align: center;
+
+      background-color: #f9f9f9;
+
+      padding: 40px;
+
+    }
+
+
+
+    h1 {
+
+      font-size: 2em;
+
+      margin-bottom: 30px;
+
+    }
+
+
+
+    #kinder-container img {
+
+      width: 150px;
+
+      cursor: pointer;
+
+      transition: transform 0.2s;
+
+    }
+
+
+
+    #kinder-container img:hover {
+
+      transform: scale(1.1);
+
+    }
+
+
+
+    #bilder-container {
+
+      display: none;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      margin-top: 30px;
+
+      opacity: 0;
+
+      animation: fadeInAll 1s ease-out forwards;
+
+    }
+
+
+
+    @keyframes fadeInAll {
+
+      to {
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+
+    .bild-wrapper {
+
+      width: 22%;
+
+    }
+
+
+
+    .bild-wrapper img {
+
+      width: 100%;
+
+      cursor: pointer;
+
+      border-radius: 8px;
+
+      transition: transform 0.2s;
+
+    }
+
+
+
+    .bild-wrapper img:hover {
+
+      transform: scale(1.05);
+
+    }
+
+
+
+    /* Popup modal */
+
+    #popup {
+
+      display: none;
+
+      position: fixed;
+
+      z-index: 100;
+
+      left: 0;
+
+      top: 0;
+
+      width: 100vw;
+
+      height: 100vh;
+
+      background: rgba(0, 0, 0, 0.8);
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+
+
+    #popup img {
+
+      max-width: 90vw;
+
+      max-height: 90vh;
+
+      border-radius: 10px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <h1>Vad gömmer sig i Kinderägget?</h1>
+
+
+
+  <div id="kinder-container">
+
+    <img src="kinder1.gif" alt="Kinderägg" id="kinder">
+
+  </div>
+
+
+
+  <div id="bilder-container"></div>
+
+
+
+  <!-- Popup -->
+
+  <div id="popup" onclick="stängPopup()">
+
+    <img id="popup-img" src="" alt="Större bild">
+
+  </div>
+
+
+
+  <script>
+
+    const kinder = document.getElementById('kinder');
+
+    const container = document.getElementById('bilder-container');
+
+    const popup = document.getElementById('popup');
+
+    const popupImg = document.getElementById('popup-img');
+
+    let redanVisat = false;
+
+
+
+    kinder.addEventListener('click', () => {
+
+      if (redanVisat) return;
+
+      redanVisat = true;
+
+
+
+      for (let i = 0; i <= 13; i++) {
+
+        const wrapper = document.createElement('div');
+
+        wrapper.className = 'bild-wrapper';
+
+
+
+        const img = document.createElement('img');
+
+        img.src = `micke${i}.jpeg`;
+
+        img.alt = `micke${i}`;
+
+        img.addEventListener('click', () => {
+
+          popupImg.src = img.src;
+
+          popup.style.display = 'flex';
+
+        });
+
+
+
+        wrapper.appendChild(img);
+
+        container.appendChild(wrapper);
+
+      }
+
+
+
+      // Visa bilderna med fade-effekt
+
+      container.style.display = 'flex';
+
+      container.style.animation = 'fadeInAll 1s ease-out forwards';
+
+    });
+
+
+
+    function stängPopup() {
+
+      popup.style.display = 'none';
+
+      popupImg.src = '';
+
+    }
+
+  </script>
+
+
 
 </body>
-</html>
 
+</html>
 
