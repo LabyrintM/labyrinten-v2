@@ -12,23 +12,23 @@
 
     body {
 
-      font-family: Georgia, serif;
+      background-color: white;
 
-      background-color: #111;
+      color: black;
 
-      color: #fff;
+      font-family: Arial, sans-serif;
 
-      text-align: center;
+      margin: 0;
 
       padding: 40px;
 
     }
 
-
-
     h1 {
 
-      font-size: 42px;
+      text-align: center;
+
+      font-size: 40px;
 
       font-weight: bold;
 
@@ -36,23 +36,25 @@
 
     }
 
+    .image-container {
 
+      text-align: center;
 
-    .center-image {
+      margin-bottom: 40px;
 
-      display: block;
+    }
 
-      margin: 0 auto 50px auto;
+    .image-container img {
 
-      max-width: 100%;
+      max-width: 500px;
+
+      width: 100%;
 
       height: auto;
 
     }
 
-
-
-    .song-block {
+    .music-row {
 
       display: flex;
 
@@ -60,59 +62,37 @@
 
       align-items: center;
 
-      max-width: 900px;
-
-      margin: 0 auto 60px auto;
-
-      flex-wrap: wrap;
+      margin: 0 10%;
 
     }
 
+    .music-player {
 
+      flex: 1;
 
-    .song-block a {
-
-      font-size: 22px;
-
-      color: #1e90ff;
-
-      text-decoration: none;
-
-      margin: 10px;
+      text-align: left;
 
     }
 
+    .music-player iframe {
 
+      width: 300px;
 
-    .song-text {
+      height: 80px;
 
-      font-size: 20px;
+      border: none;
+
+    }
+
+    .comment {
+
+      flex: 1;
 
       text-align: right;
 
-      margin: 10px;
+      font-size: 18px;
 
-    }
-
-
-
-    @media (max-width: 700px) {
-
-      .song-block {
-
-        flex-direction: column;
-
-        text-align: center;
-
-      }
-
-
-
-      .song-text {
-
-        text-align: center;
-
-      }
+      font-style: italic;
 
     }
 
@@ -128,15 +108,33 @@
 
 
 
-  <img src="bild50.jpg" alt="Musikbild" class="center-image">
+  <div class="image-container">
+
+    <img src="bild50.png" alt="bild50">
+
+  </div>
 
 
 
-  <div class="song-block">
+  <div class="music-row">
 
-    <a href="https://www.youtube.com/watch?v=0Gjx-ZQuQmc" target="_blank">Follow Me – Uncle Kracker</a>
+    <div class="music-player">
 
-    <div class="song-text">Hur rätt hade jag inte?!</div>
+      <iframe src="https://www.youtube.com/embed/0GmxNwFMRPQ?autoplay=0" 
+
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+
+              allowfullscreen>
+
+      </iframe>
+
+    </div>
+
+    <div class="comment">
+
+      Hur rätt hade jag inte?!
+
+    </div>
 
   </div>
 
@@ -145,6 +143,3 @@
 </body>
 
 </html>
-
-Avsnitt för bifogade filer
-
