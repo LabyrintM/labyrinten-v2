@@ -14,9 +14,9 @@
 
       font-family: sans-serif;
 
-      text-align: center;
+      background: #fffdfc;
 
-      background-color: #f9f9f9;
+      text-align: center;
 
       padding: 40px;
 
@@ -26,9 +26,23 @@
 
     h1 {
 
-      font-size: 2em;
+      font-size: 2.2em;
 
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+
+    }
+
+
+
+    h2 {
+
+      font-size: 1.8em;
+
+      margin: 40px 0 20px;
+
+      color: #c03d6b;
+
+      display: none;
 
     }
 
@@ -36,11 +50,11 @@
 
     #kinder-container img {
 
-      width: 150px;
+      width: 160px;
 
       cursor: pointer;
 
-      transition: transform 0.2s;
+      transition: transform 0.3s ease;
 
     }
 
@@ -98,11 +112,11 @@
 
       width: 100%;
 
-      cursor: pointer;
-
       border-radius: 8px;
 
-      transition: transform 0.2s;
+      cursor: pointer;
+
+      transition: transform 0.2s ease;
 
     }
 
@@ -116,7 +130,7 @@
 
 
 
-    /* Popup modal */
+    /* Popup */
 
     #popup {
 
@@ -126,15 +140,13 @@
 
       z-index: 100;
 
-      left: 0;
-
-      top: 0;
+      left: 0; top: 0;
 
       width: 100vw;
 
       height: 100vh;
 
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0,0,0,0.8);
 
       justify-content: center;
 
@@ -151,6 +163,36 @@
       max-height: 90vh;
 
       border-radius: 10px;
+
+    }
+
+
+
+    /* Kuvert längst ner */
+
+    #footer-icon {
+
+      margin-top: 60px;
+
+    }
+
+
+
+    #footer-icon img {
+
+      width: 60px;
+
+      cursor: pointer;
+
+      transition: transform 0.3s;
+
+    }
+
+
+
+    #footer-icon img:hover {
+
+      transform: scale(1.2);
 
     }
 
@@ -174,15 +216,33 @@
 
 
 
+  <h2 id="min-micke">MIN MICKE!</h2>
+
+
+
   <div id="bilder-container"></div>
 
 
 
-  <!-- Popup -->
+  <!-- Popup för större bilder -->
 
   <div id="popup" onclick="stängPopup()">
 
-    <img id="popup-img" src="" alt="Större bild">
+    <img id="popup-img" src="" alt="Förstorad bild">
+
+  </div>
+
+
+
+  <!-- Kuvert längst ner -->
+
+  <div id="footer-icon" style="display: none;">
+
+    <a href="texten.html">
+
+      <img src="mail-heart.png" alt="Kuvert med hjärta">
+
+    </a>
 
   </div>
 
@@ -192,21 +252,33 @@
 
     const kinder = document.getElementById('kinder');
 
-    const container = document.getElementById('bilder-container');
+    const bilderContainer = document.getElementById('bilder-container');
+
+    const rubrik = document.getElementById('min-micke');
+
+    const footerIcon = document.getElementById('footer-icon');
 
     const popup = document.getElementById('popup');
 
     const popupImg = document.getElementById('popup-img');
 
-    let redanVisat = false;
+    let klickat = false;
 
 
 
     kinder.addEventListener('click', () => {
 
-      if (redanVisat) return;
+      if (klickat) return;
 
-      redanVisat = true;
+      klickat = true;
+
+
+
+      rubrik.style.display = 'block';
+
+      bilderContainer.style.display = 'flex';
+
+      footerIcon.style.display = 'block';
 
 
 
@@ -236,17 +308,9 @@
 
         wrapper.appendChild(img);
 
-        container.appendChild(wrapper);
+        bilderContainer.appendChild(wrapper);
 
       }
-
-
-
-      // Visa bilderna med fade-effekt
-
-      container.style.display = 'flex';
-
-      container.style.animation = 'fadeInAll 1s ease-out forwards';
 
     });
 
