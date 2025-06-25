@@ -4,51 +4,55 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <title>Eken</title>
 
   <style>
 
-    body{
+    body {
 
-      background:#fff;
+      text-align: center;
 
-      color:#111;
+      background-color: #fdfaf6;
 
-      font-family:Georgia,serif;
+      font-family: Arial, sans-serif;
 
-      max-width:800px;
-
-      margin:50px auto;
-
-      text-align:center;
-
-      line-height:1.5;
+      margin-top: 60px;
 
     }
 
-    img{
 
-      max-width:90%;
 
-      height:auto;
+    .image-row {
 
-      margin:25px 0;
+      display: flex;
 
-    }
+      justify-content: center;
 
-    h1{
+      gap: 40px;
 
-      margin-bottom:40px;
+      margin-bottom: 30px;
 
     }
 
-    .caption{
 
-      font-style:italic;
 
-      margin-top:5px;
+    .image-row img {
+
+      max-width: 300px;
+
+      height: auto;
+
+    }
+
+
+
+    .caption {
+
+      font-size: 20px;
+
+      margin-top: 10px;
 
     }
 
@@ -60,31 +64,20 @@
 
 
 
-  <h1>Vad håller Mario på med?</h1>
+  <div class="image-row">
+
+    <img src="bild52.jpg" alt="Bild 52">
+
+    <img src="bild51.jpg" alt="Bild 51">
+
+  </div>
 
 
 
-  <figure>
-
-    <img src="bild52.jpg" alt="Mario – bild 52">
-
-    <figcaption class="caption">Bild 52</figcaption>
-
-  </figure>
-
-
-
-  <figure>
-
-    <img src="bild51.jpg" alt="Mario – bild 51">
-
-    <figcaption class="caption">Bild 51</figcaption>
-
-  </figure>
+  <div class="caption">Vad håller Mario på med?</div>
 
 
 
 </body>
 
 </html>
-
