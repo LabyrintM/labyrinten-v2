@@ -1,48 +1,42 @@
-<!-- GALLERY START – 10 bilder (bild80–bild90, bild82 borttagen) -->
+<!-- GALLERI: 10 bilder, snygg layout, klickbara, utan scroll -->
 
 <style>
 
-  .g{
+  .g {
 
-    display:flex;
+    display: grid;
 
-    flex-wrap:nowrap;         /* allt i en rad – ingen sidscroll */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 
-    gap:12px;
+    gap: 20px;
 
-    justify-content:center;
+    max-width: 1000px;
 
-    margin:20px auto;
+    margin: 30px auto;
 
-  }
-
-  .g a img{
-
-    /* krymper proportionellt så alla tio alltid syns, men inte för små */
-
-    width:calc((100vw - 9*12px - 40px)/10);
-
-    max-width:160px;          /* perfekt storlek på vanlig laptopskärm */
-
-    min-width:90px;           /* fall­back på mobil i stående läge */
-
-    height:auto;
-
-    border-radius:6px;
-
-    box-shadow:0 1px 4px rgba(0,0,0,.12);
-
-    transition:transform .2s;
+    padding: 0 10px;
 
   }
 
-  @media (min-width:1600px){  /* på riktigt bred skärm får de växa lite till */
+  .g a img {
 
-    .g a img{max-width:180px;}
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 6px;
+
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+
+    transition: transform 0.2s ease;
 
   }
 
-  .g a img:hover{transform:scale(1.04);}
+  .g a img:hover {
+
+    transform: scale(1.03);
+
+  }
 
 </style>
 
@@ -71,6 +65,3 @@
   <a href="bild90.jpeg" target="_blank"><img src="bild90.jpeg" alt=""></a>
 
 </div>
-
-<!-- GALLERY END -->
-
