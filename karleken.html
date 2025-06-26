@@ -1,38 +1,68 @@
-<!-- GALLERI: 10 bilder, större & jämn fördelning -->
-
 <style>
 
-  .g{
+  .g {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); /* större min-bredd */
+    grid-template-columns: repeat(5, 1fr); /* 5 per rad */
 
-    gap:24px;                           /* luft mellan bilderna */
+    gap: 24px;
 
-    max-width:1200px;                   /* centrerat på bred skärm */
+    max-width: 1200px;
 
-    margin:40px auto;
+    margin: 40px auto;
 
-    padding:0 12px;
-
-  }
-
-  .g a img{
-
-    width:100%;
-
-    height:auto;
-
-    border-radius:6px;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.15);
-
-    transition:transform .2s ease;
+    padding: 0 20px;
 
   }
 
-  .g a img:hover{transform:scale(1.03);}
+
+
+  .g a img {
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 6px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    transition: transform 0.2s;
+
+  }
+
+
+
+  .g a img:hover {
+
+    transform: scale(1.03);
+
+  }
+
+
+
+  @media (max-width: 1000px) {
+
+    .g { grid-template-columns: repeat(4, 1fr); }
+
+  }
+
+
+
+  @media (max-width: 800px) {
+
+    .g { grid-template-columns: repeat(3, 1fr); }
+
+  }
+
+
+
+  @media (max-width: 600px) {
+
+    .g { grid-template-columns: repeat(2, 1fr); }
+
+  }
 
 </style>
 
@@ -61,4 +91,3 @@
   <a href="bild90.jpeg" target="_blank"><img src="bild90.jpeg" alt=""></a>
 
 </div>
-
