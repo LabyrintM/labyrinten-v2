@@ -1,42 +1,38 @@
-<!-- GALLERI: 10 bilder, snygg layout, klickbara, utan scroll -->
+<!-- GALLERI: 10 bilder, större & jämn fördelning -->
 
 <style>
 
-  .g {
+  .g{
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); /* större min-bredd */
 
-    gap: 20px;
+    gap:24px;                           /* luft mellan bilderna */
 
-    max-width: 1000px;
+    max-width:1200px;                   /* centrerat på bred skärm */
 
-    margin: 30px auto;
+    margin:40px auto;
 
-    padding: 0 10px;
-
-  }
-
-  .g a img {
-
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 6px;
-
-    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
-
-    transition: transform 0.2s ease;
+    padding:0 12px;
 
   }
 
-  .g a img:hover {
+  .g a img{
 
-    transform: scale(1.03);
+    width:100%;
+
+    height:auto;
+
+    border-radius:6px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+
+    transition:transform .2s ease;
 
   }
+
+  .g a img:hover{transform:scale(1.03);}
 
 </style>
 
@@ -65,3 +61,4 @@
   <a href="bild90.jpeg" target="_blank"><img src="bild90.jpeg" alt=""></a>
 
 </div>
+
