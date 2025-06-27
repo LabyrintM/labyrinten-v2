@@ -85,6 +85,41 @@
     }
 
   </style>
+  .lightbox {
+
+  display: none;
+
+  position: fixed;
+
+  top: 0; left: 0; right: 0; bottom: 0;
+
+  background-color: rgba(0,0,0,0.8);
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1000;
+
+}
+
+.lightbox img {
+
+  max-width: 90%;
+
+  max-height: 90%;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 20px #000;
+
+}
+
+.lightbox:target {
+
+  display: flex;
+
+}
 
 </head>
 
@@ -98,7 +133,11 @@
 
     <!-- Bilden ligger helt separat, vänster om texten -->
 
-    <img src="bild200.jpeg" alt="bild200" class="meddelanden-bild">
+   <a href="#bildpopup">
+
+  <img src="bild200.jpeg" alt="bild200" class="meddelanden-bild">
+
+</a>
 
 
 
@@ -210,6 +249,12 @@
 
   </div>
 
+
+<div id="bildpopup" class="lightbox" onclick="location.href='#'">
+
+  <img src="bild200.jpeg" alt="bild200 stort">
+
+</div>
 
 
 </body>
