@@ -1,68 +1,44 @@
 <style>
 
-  .g {
+  .g{
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: repeat(5, 1fr); /* 5 per rad */
+    grid-template-columns:repeat(5,1fr); /* 5 per rad */
 
-    gap: 24px;
+    gap:24px;
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 40px auto;
+    margin:40px auto;
 
-    padding: 0 20px;
-
-  }
-
-
-
-  .g a img {
-
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 6px;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
-    transition: transform 0.2s;
+    padding:0 20px;
 
   }
 
+  .g a img{
 
+    width:100%;
 
-  .g a img:hover {
+    height:auto;
 
-    transform: scale(1.03);
+    border-radius:6px;
 
-  }
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 
-
-
-  @media (max-width: 1000px) {
-
-    .g { grid-template-columns: repeat(4, 1fr); }
+    transition:transform .2s;
 
   }
 
-
-
-  @media (max-width: 800px) {
-
-    .g { grid-template-columns: repeat(3, 1fr); }
-
-  }
+  .g a img:hover{ transform:scale(1.03); }
 
 
 
-  @media (max-width: 600px) {
+  @media(max-width:1000px){ .g{ grid-template-columns:repeat(4,1fr);} }
 
-    .g { grid-template-columns: repeat(2, 1fr); }
+  @media(max-width:800px){  .g{ grid-template-columns:repeat(3,1fr);} }
 
-  }
+  @media(max-width:600px){  .g{ grid-template-columns:repeat(2,1fr);} }
 
 </style>
 
@@ -70,13 +46,35 @@
 
 <div class="g">
 
+  <!-- blank bilder -->
+
   <a href="bild80.jpeg" target="_blank"><img src="bild80.jpeg" alt=""></a>
 
   <a href="bild81.jpeg" target="_blank"><img src="bild81.jpeg" alt=""></a>
 
   <a href="bild83.jpeg" target="_blank"><img src="bild83.jpeg" alt=""></a>
 
-<a href="#" onclick="if(prompt('Dynamit-Harry har en välvd TV, men Sickan har en…')?.trim().toLowerCase()==='plan'){location.href='myset.html';} return false;"><img src="bild84.jpeg" alt="" /></a>
+
+
+  <!-- bild84 med gåta ⇒ myset.html -->
+
+  <a href="#"
+
+     onclick="if(prompt('Dynamit-Harry har en välvd TV, men Sickan har en…')
+
+                ?.trim().toLowerCase()==='plan'){
+
+                location.href='myset.html';}
+
+              return false;">
+
+    <img src="bild84.jpeg" alt="">
+
+  </a>
+
+
+
+  <!-- fler blank bilder -->
 
   <a href="bild85.jpeg" target="_blank"><img src="bild85.jpeg" alt=""></a>
 
@@ -84,12 +82,42 @@
 
   <a href="bild87.jpeg" target="_blank"><img src="bild87.jpeg" alt=""></a>
 
- <a href="bild88.jpeg" target="_blank"><img src="bild88.jpeg" alt=""></a>
-
-<a href="#" onclick="if(prompt('Jag har aldrig varit duktig bakom kameran, men nu har jag anmält mig till ett fotbollsläger i Italien. Där får man lära sig att…')?.trim().toLowerCase()==='filma'){window.location='meddelanden.html';} return false;"><img src="bild89.jpeg" alt=""></a>
-  
-<a href="#" onclick="if(prompt('Min vän Hans har en bror som heter Bror, så bror hans heter Hans och Hans bror heter..')?.trim().toLowerCase()==='bror'){location.href='kroppen.html';} return false;"><img src="bild90.jpeg" alt="" /></a>
+  <a href="bild88.jpeg" target="_blank"><img src="bild88.jpeg" alt=""></a>
 
 
+
+  <!-- bild89 med gåta ⇒ meddelanden.html -->
+
+  <a href="#"
+
+     onclick="if(prompt('Jag har aldrig varit duktig bakom kameran, men nu har jag anmält mig till ett fotbollsläger i Italien. Där får man lära sig att…')
+
+                ?.trim().toLowerCase()==='filma'){
+
+                window.location='meddelanden.html';}
+
+              return false;">
+
+    <img src="bild89.jpeg" alt="">
+
+  </a>
+
+
+
+  <!-- bild90 med gåta ⇒ kroppen.html -->
+
+  <a href="#"
+
+     onclick="if(prompt('Min vän Hans har en bror som heter Bror, så bror hans heter Hans och Hans bror heter…')
+
+                ?.trim().toLowerCase()==='bror'){
+
+                location.href='kroppen.html';}
+
+              return false;">
+
+    <img src="bild90.jpeg" alt="">
+
+  </a>
 
 </div>
