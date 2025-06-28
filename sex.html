@@ -8,47 +8,109 @@
 
   <title>Come over to the darkside</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+  <!-- Snirkligt men kraftigt typsnitt för rubriken -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!-- Robust serif för brödtexten -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+
 
   <style>
 
-    body {
+    /* Grundlayout: tre kolumner – vänster-bilder, text, höger-bilder */
 
-      font-family: 'Dancing Script', cursive;
+    .grid {
 
-      background: #fff;
+      display: grid;
 
-      color: #000;
+      grid-template-columns: 170px auto 170px;
 
-      margin: 60px;
+      justify-content: center;           /* håller allt centrerat */
+
+      gap: 0;                            /* inga luftmellanrum */
+
+      max-width: 100%;                   /* ingen sidscroll */
+
+    }
+
+
+
+    /* Sidobilder: två per kolumn, staplade */
+
+    .side {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 24px;
+
+      align-items: center;
+
+      margin-top: 120px;                 /* starta lite nedanför rubriken */
+
+    }
+
+    .side img {
+
+      width: 170px;
+
+      height: auto;
+
+      border-radius: 6px;
+
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+
+      cursor: pointer;
+
+    }
+
+
+
+    /* Textkolumn */
+
+    .content {
+
+      max-width: 720px;
+
+      padding: 0 20px;
+
+      font-family: 'Merriweather', serif;
 
       font-size: 20px;
 
-      line-height: 1.6;
+      line-height: 1.55;
 
-      position: relative;
+      color: #000;
 
     }
+
+
+
+    /* Rubrik */
 
     h1 {
 
+      font-family: 'Playfair Display', serif;
+
+      font-style: italic;
+
+      font-size: 46px;
+
       text-align: center;
 
-      font-size: 36px;
-
-      margin-bottom: 40px;
+      margin: 60px 0;
 
     }
 
-    p {
 
-      max-width: 700px;
 
-      margin: 0 auto 25px auto;
-
-      white-space: pre-line;
-
-    }
+    /* Mittbild */
 
     .center-img {
 
@@ -56,37 +118,29 @@
 
       margin: 40px auto;
 
-      max-width: 500px;
+      max-width: 350px;
 
-      width: 100%;
+      width: 90%;
 
-      cursor: pointer;
+      border-radius: 6px;
 
-    }
-
-    .side {
-
-      position: absolute;
-
-      width: 140px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.25);
 
       cursor: pointer;
 
     }
 
-    .left1 { top: 200px; left: -180px; }
-
-    .left2 { top: 800px; left: -180px; }
-
-    .right1 { top: 400px; right: -180px; }
-
-    .right2 { top: 1000px; right: -180px; }
 
 
+    /* Responsivt: döljer sidobilder när skärmen blir smal */
 
     @media(max-width: 1000px) {
 
+      .grid { grid-template-columns: auto; }
+
       .side { display: none; }
+
+      .content { padding: 0 10px; }
 
     }
 
@@ -102,103 +156,115 @@
 
 
 
-  <!-- Sidobilder vänster -->
-
-  <a href="bild102.jpeg" target="_blank"><img src="bild102.jpeg" class="side left1" alt=""></a>
-
-  <a href="bild103.jpeg" target="_blank"><img src="bild103.jpeg" class="side left2" alt=""></a>
+  <div class="grid">
 
 
 
-  <!-- Sidobilder höger -->
+    <!-- Vänster marginalbilder -->
 
-  <a href="bild104.jpeg" target="_blank"><img src="bild104.jpeg" class="side right1" alt=""></a>
+    <div class="side">
 
-  <a href="bild105.jpeg" target="_blank"><img src="bild105.jpeg" class="side right2" alt=""></a>
+      <a href="bild102.jpeg" target="_blank"><img src="bild102.jpeg" alt=""></a>
 
+      <a href="bild103.jpeg" target="_blank"><img src="bild103.jpeg" alt=""></a>
 
-
-  <p>
-
-Redan vid första mötet så fanns han där, bakom det lätta, glatta,
-
-välpolerade såg jag honom en riktig "ful i fan".
-
-Han som solat sig i slätstrukna skjortor, dyra putsade skor och kritvita linnebyxor.
-
-Den jag sökt hela mitt liv, min ägare!
-
-Nu satt han mitt emot mig, med ögon som tiggde om att få följa med ner i mörkrets riktiga smuts.
+    </div>
 
 
 
-Det som alltid varit skönt sex började sakta utveckla sig, mer bekvämlighet i varandras närvaro
+    <!-- Själva texten + mittbilden -->
 
-ledde till lite hårade tag, "vad sker om jag böjer henne sådär", en hand runt halsen, sånt!
+    <div class="content">
 
-
-
-Väckte Rovdjuret från en livstid av sömn så till den grad att hon kunde känna när han ville.
-
-Som en våg sköljde den känslan hon aldrig tidigare upplevt genom kroppen av välbehag, stundtals så starkt,
-
-att hon var tvungen att ta stöd,
-
-ibland mot närmsta vägg och ibland mot honom, en hand på den hårdaste av bröstkorgar.
+      <p>Come over to the darkside my young Padawan</p>
 
 
 
-Känna hans närvaro, hur han gillade att iakta henne i köket, vakta på sitt byte, för att smyga upp bakom,
+      <p>Redan vid första mötet så fanns han där, bakom det lätta, glatta,
 
-djupa andetag i nacken, en arm runt midjan som tog ett fastare grepp, den intensivaste av blickar som
+      välpolerade såg jag honom en riktig "ful i fan". 
 
-skrek "jag måste ta dig nu". Intensiva kyssar, upptryckt mot väggen, en body som drogs ner, blottade bröstvårtor
+      Han som solat sig i slätstrukna skjortor, dyra putsade skor och kritvita linnebyxor. 
 
-så styva att det värkte, hon förde ner handen till kuken, kuken som redan var stenhård när han tryckt
+      Den jag sökt hela mitt liv, min ägare!
 
-upp den mot hennes rumpa, gnidit den mot hennes skinkor.
-
-  </p>
+      Nu satt han mitt emot mig, med ögon som tiggde om att få följa med ner i mörkrets riktiga smuts.</p>
 
 
 
-  <!-- Bild i mitten -->
+      <p>Det som alltid varit skönt sex började sakta utveckla sig, mer bekvämlighet i varandras närvaro
 
-  <a href="bild101.jpeg" target="_blank">
-
-    <img src="bild101.jpeg" class="center-img" alt="">
-
-  </a>
+      ledde till lite hårade tag, "vad sker om jag böjer henne sådär", en hand runt halsen, sånt!</p>
 
 
 
-  <p>
+      <p>Väckte Rovdjuret från en livstid av sömn så till den grad att hon kunde känna när han ville. 
 
-Med sina starka armar lyfta henne och bära mot sängen, känna hur hon darrade av kåthet, känna
+      Som en våg sköljde den känslan hon aldrig tidigare upplevt genom kroppen av välbehag, stundtals så starkt,
 
-kroppens vibrationer som så tydligt sa till honom exakt hur våt hon var där nere.
+      att hon var tvungen att ta stöd,
 
-Kasta henne på sängen, sära direkt, trycka hårt och direkt hela vägen in i en svepande rörselse.
-
-Hur hon älskade hans ljud, hans otroliga kropp, lukten, ljuden och den ultimata känslan av att ge bort sig till just honom.
-
-Två svettiga sexiga kroppar som hungrade efter varandra, leva ut begäret, böja, bända, vrida. Ibland med bojor som låstes
-
-ovanför hennes huvud, sele på som satt så hårt att han hade kunnat lyfta henne som ett litet fångat djur i den.
+      ibland mot närmsta vägg och ibland mot honom, en hand på den hårdaste av bröstkorgar.</p>
 
 
 
-Så gav han henne kragen, den han beställt specifikt efter hennes mått. Hon satt på sängkanten, lyfte håret för att han
+      <p>Känna hans närvaro, hur han gillade att iakta henne i köket, vakta på sitt byte, för att smyga upp bakom, 
 
-skulle komma åt, kände ett pekfinger dra längs med nackpartiet, en stämning nästan högtidlig.
+      djupa andetag i nacken, en arm runt midjan som tog ett fastare grepp, den intensivaste av blickar som 
 
-Han fäste den runt hennes hals, den satt som en smäck och det var som att han där och då klev helt in i sin roll, axlade den och befäste att
+      skrek "jag måste ta dig nu". Intensiva kyssar, upptryckt mot väggen, en body som drogs ner, blottade bröstvårtor 
 
-ansvaret att förvalta sin ägodel som nu är hans, tillhörigheten är hos honom och kommer för evigt att stanna där.
+      så styva att det värkte, hon förde ner handen till kuken, kuken som redan var stenhård när han tryckt 
 
-  </p>
+      upp den mot hennes rumpa, gnidit den mot hennes skinkor.</p>
 
 
+
+      <!-- Mittenbild -->
+
+      <a href="bild101.jpeg" target="_blank"><img src="bild101.jpeg" class="center-img" alt=""></a>
+
+
+
+      <p>Med sina starka armar lyfta henne och bära mot sängen, känna hur hon darrade av kåthet, känna 
+
+      kroppens vibrationer som så tydligt sa till honom exakt hur våt hon var där nere. 
+
+      Kasta henne på sängen, sära direkt, trycka hårt och direkt hela vägen in i en svepande rörselse. 
+
+      Hur hon älskade hans ljud, hans otroliga kropp, lukten, ljuden och den ultimata känslan av att ge bort sig till just honom. 
+
+      Två svettiga sexiga kroppar som hungrade efter varandra, leva ut begäret, böja, bända, vrida. Ibland med bojor som låstes
+
+      ovanför hennes huvud, sele på som satt så hårt att han hade kunnat lyfta henne som ett litet fångat djur i den.</p>
+
+
+
+      <p>Så gav han henne kragen, den han beställt specifikt efter hennes mått. Hon satt på sängkanten, lyfte håret för att han 
+
+      skulle komma åt, kände ett pekfinger dra längs med nackpartiet, en stämning nästan högtidlig. 
+
+      Han fäste den runt hennes hals, den satt som en smäck och det var som att han där och då klev helt in i sin roll, axlade den och befäste att 
+
+      ansvaret att förvalta sin ägodel som nu är hans, tillhörigheten är hos honom och kommer för evigt att stanna där.</p>
+
+    </div>
+
+
+
+    <!-- Höger marginalbilder -->
+
+    <div class="side">
+
+      <a href="bild104.jpeg" target="_blank"><img src="bild104.jpeg" alt=""></a>
+
+      <a href="bild105.jpeg" target="_blank"><img src="bild105.jpeg" alt=""></a>
+
+    </div>
+
+
+
+  </div>
 
 </body>
 
