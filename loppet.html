@@ -4,63 +4,83 @@
 
 <style>
 
-  .brev-container{
+  .brev-container {
 
-    max-width:900px;     /* styra radlängd */
+    display: flex;
 
-    margin:40px auto;    /* centrerar blocket på sidan */
+    justify-content: center;
 
-    padding:0 20px;
+    padding: 40px 20px;
 
-    font-family:"  "SAtisfy", cursive;
-  
-    line-height:1.4;     /* ingen dubbelrad-känsla */
+    max-width: 1200px;
 
-    font-size:1.35rem;   /* justera vid behov */
+    margin: 0 auto;
 
   }
 
-  .brev-rubrik{
 
-    margin:0 0 20px 0;
 
-    font-size:2.4rem;
+  .brev-content {
 
-    font-weight:700;
+    display: flex;
 
-  }
+    flex-direction: row;
 
-  .brev-content{
+    align-items: center;
 
-    display:flex;
-
-    align-items:center;  /* ger vertikal mitt-justering bild-mot-text */
-
-    gap:30px;            /* luft mellan text och bild */
+    gap: 40px;
 
   }
 
-  .brev-text{
 
-    flex:1;              /* låter texten ta resterande bredd */
+
+  .brev-text {
+
+    flex: 2;
+
+    font-family: "Satisfy", cursive;
+
+    font-size: 2.1rem;
+
+    line-height: 1.4;
+
+    text-align: left;
 
   }
 
-  .brev-text p{          /* styckeformat */
 
-    margin:0 0 0.6em 0;
+
+  .brev-text p {
+
+    margin: 0 0 0.6em 0;
 
   }
+
+
+
+  .brev-bild {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+
 
   .brev-bild img {
 
-    width:auto;         /* “lagom” storlek – ändra om du vill */
+    width: auto;
 
-    max-height: 1400px;
-    
-    height:100%;
+    height: auto;
 
-    cursor:pointer;      /* visar att den är klickbar */
+    max-height: 900px;
+
+    cursor: pointer;
 
   }
 
@@ -70,15 +90,11 @@
 
 <div class="brev-container">
 
-  <h2 class="brev-rubrik">Rubrik här</h2>
-
-
-
   <div class="brev-content">
 
-    <!-- TEXTDELEN -->
+    <div class="brev-text">
 
-    
+
 
       <p>Jag vill att du ska veta att jag är hemskt ledsen över vad som hände kring din bror.<br>
 
@@ -126,7 +142,7 @@
 
 
 
-      <p>Se det inte som en tröst, eller förhoppning. Ingen är nog mer medveten om att vad som helst kan ske än jag.<br>
+      <p>Ser det inte varken som en tröst, eller förhoppning. Ingen är nog mer medveten om att vad som helst kan ske än jag.<br>
 
       Slumpen kan gå in och ändra – men det innebär inte i sig att magkänslan ursprungligen hade fel.<br>
 
@@ -152,19 +168,22 @@
 
       men vet inte om det hinner släppa för att nå den.</p>
 
+
+
     </div>
 
 
 
-    <!-- BILDEN (klickbar) -->
+    <div class="brev-bild">
 
-    <a href="bild505.jpeg" target="_blank">
+      <a href="bild505.jpeg" target="_blank">
 
-      <img src="bild505.jpeg" alt="bild505" class="brev-image">
+        <img src="bild505.jpeg" alt="bild505">
 
-    </a>
+      </a>
+
+    </div>
 
   </div>
 
 </div>
-
