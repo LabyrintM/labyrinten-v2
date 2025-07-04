@@ -12,11 +12,13 @@
 
 <style>
 
-  /* helsidan centrerad layout */
+  /* hela sidan beter sig som en “skylt” som fyller skärmen */
 
   body{
 
     margin:0;
+
+    height:100vh;                       /* 100 % av skärmen */
 
     display:flex;
 
@@ -24,11 +26,13 @@
 
     align-items:center;
 
-    justify-content:flex-start;
+    justify-content:space-between;      /* bild - text - stjärna jämnt fördelat */
+
+    font-family:Arial, sans-serif;
 
     background:#fff;
 
-    font-family: "Arial", sans-serif;
+    text-align:center;
 
     color:#000;
 
@@ -36,61 +40,57 @@
 
 
 
-  /* rubrik – fet, svart */
+  /* toppbild – skalas ned så den aldrig kräver scroll */
+
+  .top{
+
+    max-height:40vh;                    /* högst 40 % av skärmen */
+
+    width:auto;
+
+  }
+
+
+
+  /* fet rubrik */
 
   h1{
 
-    font-size:3rem;          /* stort men ryms på skärm */
+    font-size:22px;
 
     font-weight:900;
 
-    margin:25px 0 20px 0;
+    margin:10px 0;
 
   }
 
 
 
-  /* textblock */
+  /* texten – tydlig men kompakt */
 
-  .text{
+  .info{
 
-    font-size:1.35rem;       /* tydligt, “stoppskylt-känsla” */
+    font-size:16px;
 
-    line-height:1.5;
+    line-height:1.4;
 
-    max-width:900px;         /* så man slipper horisontalscroll */
+    max-width:75vw;                     /* bredd som lämnar luft vid sidorna */
 
-    text-align:center;
-
-  }
-
-
-
-  /* toppbild + stjärn-gif justeras med samma klass */
-
-  .center-img{
-
-    display:block;
-
-    max-width:420px;         /* tillräckligt stort utan att kräva scroll */
-
-    width:100%;
-
-    height:auto;
-
-    margin:0 auto;
+    white-space:pre-line;               /* radbrytningar behålls */
 
   }
 
 
 
-  /* lite luft mellan sista texten och stjärngifen */
+  /* stjärnan nederst */
 
   .star{
 
-    margin-top:30px;
+    height:60px;                        /* liten men tydlig */
 
-    max-width:180px;
+    width:auto;
+
+    margin-bottom:10px;
 
   }
 
@@ -102,66 +102,57 @@
 
 <body>
 
-  <!-- toppbild -->
-
-  <img src="bild510.jpeg" alt="OBS-bild" class="center-img">
 
 
+  <!-- Bilden överst -->
 
-  <!-- rubrik -->
-
-  <h1>OBS! FRIENDLY REMINDER!</h1>
+  <img src="bild510.jpeg" alt="OBS-bild" class="top">
 
 
 
-  <!-- texten exakt som i bilden -->
+  <!-- Rubrik -->
 
-  <div class="text">
-
-    Alla Mickes egna antaganden kring/om Johanna, Johanna + Micke = Oss,<br>
-
-    samt Micke själv är, om så sker i negativ benämning,<br>
-
-    <b> är totalt felaktiga!</b><br><br>
+  <h1>OBS! Friendly reminder!</h1>
 
 
 
-    Micke ska komma ihåg att Johanna älskar honom ❤ och att han aldrig<br>
+  <!-- Exakt text från din bild -->
 
-    gjort eller kommer kunna göra något fel / taskigt / elakt / sårande<br>
+  <div class="info">
 
-    mot henne eller mot dem som par.<br>
+Alla Mickes egna antaganden kring/om Johanna, Johanna + Micke = Oss, samt Micke själv
 
-
-
-    Så allt som Lars-Åke eller annan specifik inre personlighet som<br>
-
-    inte är Johannas Micke försöker övertyga honom om<br>
-
-    undandebejdes eftersom det är helt missvisande.<br>
-
-    Dra alltid slutsatsen att det som antas i dessa lägen<br>
-
-    i verkligheten är det totala motsatta.<br><br>
+är om så sker i negativ benämning totalt felaktiga!
 
 
 
-    Detta gäller tills Micke åter är med Johanna,<br>
+Micke ska komma ihåg att Johanna älskar honom "röd emoji hjärta" och att han aldrig
 
-    då eventuellt följer nya instruktioner.
+gjort eller komma kunna göra något fel/taskigt/elakt/sårande mot henne eller mot dem som par.
+
+
+
+Så allt som Lars-Åke eller annan specifik inre personlighet som inte är Johannas Micke
+
+försöker övertyga honom om undanbedes eftersom det är helt missvisande.
+
+Dra alltid slutsatsen att det som antas i dessa lägen är i verkligheten det totala motsatta.
+
+
+
+Detta gäller tills Micke åter är med Johanna – då eventuellt följer nya instruktioner.
 
   </div>
 
 
 
-  <!-- stjärn-gif -->
+  <!-- Stjärnan längst ned -->
 
-  <img src="stjarna.gif" alt="stjärna" class="center-img star">
+  <img src="stjarna.gif" alt="stjärna" class="star">
+
+
 
 </body>
 
 </html>
-
-
-
 
