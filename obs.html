@@ -4,121 +4,93 @@
 
 <head>
 
-<meta charset="utf-8">
+  <meta charset="UTF-8">
 
-<title>OBS</title>
+  <title>OBS</title>
 
+  <style>
 
+    body {
 
-<style>
+      margin: 0;
 
-  /* hela sidan beter sig som en “skylt” som fyller skärmen */
+      padding: 0;
 
-  body{
+      height: 100vh;
 
-    margin:0;
+      width: 100vw;
 
-    height:100vh;                       /* 100 % av skärmen */
+      display: flex;
 
-    display:flex;
+      flex-direction: column;
 
-    flex-direction:column;
+      justify-content: space-between;
 
-    align-items:center;
+      align-items: center;
 
-    justify-content:space-between;      /* bild - text - stjärna jämnt fördelat */
+      text-align: center;
 
-    font-family:Arial, sans-serif;
+      font-family: Arial, sans-serif;
 
-    background:#fff;
+      font-size: 1.9vh;
 
-    text-align:center;
-
-    color:#000;
-
-  }
+    }
 
 
 
-  /* toppbild – skalas ned så den aldrig kräver scroll */
+    img {
 
-  .top{
+      max-height: 22vh;
 
-    max-height:40vh;                    /* högst 40 % av skärmen */
+      width: auto;
 
-    width:auto;
-
-  }
+    }
 
 
 
-  /* fet rubrik */
+    h1 {
 
-  h1{
+      font-size: 3vh;
 
-    font-size:22px;
+      font-weight: bold;
 
-    font-weight:900;
+      margin: 0;
 
-    margin:10px 0;
-
-  }
+    }
 
 
 
-  /* texten – tydlig men kompakt */
+    .textblock {
 
-  .info{
+      max-width: 90vw;
 
-    font-size:16px;
+      white-space: pre-line;
 
-    line-height:1.4;
+      line-height: 1.2;
 
-    max-width:75vw;                     /* bredd som lämnar luft vid sidorna */
-
-    white-space:pre-line;               /* radbrytningar behålls */
-
-  }
+    }
 
 
 
-  /* stjärnan nederst */
+    .star {
 
-  .star{
+      max-height: 7vh;
 
-    height:60px;                        /* liten men tydlig */
+      width: auto;
 
-    width:auto;
+    }
 
-    margin-bottom:10px;
-
-  }
-
-</style>
+  </style>
 
 </head>
 
-
-
 <body>
 
-
-
-  <!-- Bilden överst -->
-
-  <img src="bild510.jpeg" alt="OBS-bild" class="top">
-
-
-
-  <!-- Rubrik -->
+  <img src="bild510.jpeg" alt="Stoppskylt">
 
   <h1>OBS! Friendly reminder!</h1>
 
-
-
-  <!-- Exakt text från din bild -->
-
-  <div class="info">
+  <div class="textblock">
 
 Alla Mickes egna antaganden kring/om Johanna, Johanna + Micke = Oss, samt Micke själv
 
@@ -128,29 +100,23 @@ Alla Mickes egna antaganden kring/om Johanna, Johanna + Micke = Oss, samt Micke 
 
 Micke ska komma ihåg att Johanna älskar honom "röd emoji hjärta" och att han aldrig
 
-gjort eller komma kunna göra något fel/taskigt/elakt/sårande mot henne eller mot dem som par.
+gjort eller komma kunna göra något fel/taskigt/elakt/sårande mot henne eller mot de som par.
 
 
 
 Så allt som Lars-Åke eller annan specifik inre personlighet som inte är Johannas Micke
 
-försöker övertyga honom om undanbedes eftersom det är helt missvisande.
+försöker överala honom om undanbedjes eftersom det är helt missvisande.
 
 Dra alltid slutsatsen att det som antas i dessa lägen är i verkligheten det totala motsatta.
 
 
 
-Detta gäller tills Micke åter är med Johanna – då eventuellt följer nya instruktioner.
+Detta gäller tills Micke åter är med Johanna då eventuellt följer nya instruktioner.
 
   </div>
 
-
-
-  <!-- Stjärnan längst ned -->
-
-  <img src="stjarna.gif" alt="stjärna" class="star">
-
-
+  <img src="stjarna.gif" class="star" alt="Stjärna">
 
 </body>
 
