@@ -1,110 +1,187 @@
-<div class="room-content">
+<!DOCTYPE html>
 
-  <h1>Musikens tidslinje</h1>
+<html lang="sv">
 
+<head>
 
+  <meta charset="UTF-8">
 
-  <p><strong>Våran tidslinje i musik enligt mig:</strong></p>
+  <title>Musikens tidslinje</title>
 
+  <style>
 
+    body {
 
-  <ol>
+      font-family: Arial, sans-serif;
 
-    <li><strong>Follow Me</strong> – Uncle Kracker<br>
+      display: flex;
 
-      <em>(Hur rätt hade jag inte)</em></li>
+      justify-content: center;
 
+      align-items: flex-start;
 
+      padding: 40px;
 
-    <li><strong>Toes</strong> – Zac Brown Band<br>
+      background-color: #f8f8f8;
 
-      <em>(den du skickade som är så mycket du)</em></li>
-
-
-
-    <li><strong>Den sista sången</strong> – Darin<br>
-
-      <em>(brustet hjärta)</em></li>
-
-
-
-    <li><strong>Until I Found You</strong> – Stephen Sanchez<br>
-
-      <em>(den där jag inte skulle läsa in så mycket i texten, men gjorde det givetvis ändå)</em></li>
+    }
 
 
 
-    <li><strong>Dansa med mig</strong> – Klaudy, Julia Lov<br>
+    .container {
 
-      <em>(Gråtlördag)</em></li>
+      display: flex;
 
+      max-width: 1200px;
 
+      width: 100%;
 
-    <li><strong>I Was Made for Lovin' You (The Fall Guy)</strong> – YUNGBLUD<br>
-
-      <em>(kärlek)</em></li>
-
-
-
-    <li><strong>Two Hearts</strong> – Phil Collins<br>
-
-      <em>(lycka)</em></li>
+    }
 
 
 
-    <li><strong>Lost and Found</strong> – Molly Sandén & Viktor Leksell<br>
+    .text {
+
+      flex: 2;
+
+      padding-right: 40px;
+
+      line-height: 1.8;
+
+      font-size: 16px;
+
+      color: #333;
+
+    }
+
+
+
+    .images {
+
+      flex: 1;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 20px;
+
+    }
+
+
+
+    .images img {
+
+      width: 100%;
+
+      height: auto;
+
+      border-radius: 8px;
+
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="text">
+
+      <h2>Våran tidslinje i musik enligt mig:</h2>
+
+      <p>1. <strong>Follow Me</strong> – Uncle Kracker<br>
+
+      (Hur rätt hade jag inte)</p>
+
+      <p>2. <strong>Toes</strong> – Zac Brown Band<br>
+
+      (Den du skickade som är så mycket du)</p>
+
+      <p>3. <strong>Den sista sången</strong> – Darin<br>
+
+      (Brustet hjärta)</p>
+
+      <p>4. <strong>Until I Found You</strong> – Stephen Sanchez<br>
+
+      (Den där jag inte skulle läsa in så mycket i texten, men gjorde det givetvis ändå)</p>
+
+      <p>5. <strong>Dansa med mig</strong> – Klaudy, Julia Lov<br>
+
+      (Gråtlördag)</p>
+
+      <p>6. <strong>I Was Made for Lovin' You</strong> – Yungblud (The Fall Guy)<br>
+
+      (Kärlek)</p>
+
+      <p>7. <strong>Two Hearts</strong> – Phil Collins<br>
+
+      (Lycka)</p>
+
+      <p>8. <strong>Lost and Found</strong> – Molly Sandén & Viktor Leksell<br>
 
       – <strong>Du och jag</strong> – Kerstin Ljungström<br>
 
-      <em>(fortsatta bevis på omöjligheten att va utan varandra)</em></li>
+      (Fortsatta bevis på omöjligheten att vara utan varandra)</p>
+
+      <p>9. <strong>Mickey</strong> – Carola<br>
+
+      (Tog jäkligt lång tid innan jag insåg den, det är ju du)</p>
+
+      <p>10. <strong>Life is a Highway</strong> – Rascal Flatts<br>
+
+      (Roadtrip och tidernas minivacay)</p>
+
+      <p><strong>Bonus – vår låt:</strong><br>
+
+      <strong>You're Still the One (Acoustic)</strong> – Jada Facer<br>
+
+      (Men egentligen gångbar i precis alla versioner)</p>
 
 
 
-    <li><strong>Mickey</strong> – Carola<br>
+      <h3>Andra godbitar – både för att de påminner och bara för att:</h3>
 
-      <em>(tog jäkligt lång tid innan jag insåg den, det är ju du)</em></li>
+      <ul>
+
+        <li>Tennessee – Hans Zimmer</li>
+
+        <li>A Thousand Years – Jasmine Thompson</li>
+
+        <li>Million Reasons – Lady Gaga</li>
+
+        <li>I Follow – Loi</li>
+
+        <li>Beauty in the Struggle – Bryan Martin</li>
+
+        <li>Something in the Orange – Micky</li>
+
+        <li>Always Remember Us This Way – Lady Gaga</li>
+
+        <li>Picture (feat. Sheryl Crow) – Kid Rock</li>
+
+      </ul>
+
+    </div>
 
 
 
-    <li><strong>Life is a Highway</strong> – Rascal Flatts<br>
+    <div class="images">
 
-      <em>(roadtrip och tidernas minivacay)</em></li>
+      <img src="musik1.jpeg" alt="musikbild 1">
 
-  </ol>
+      <img src="musik2.jpeg" alt="musikbild 2">
 
+      <img src="musik3.jpeg" alt="musikbild 3">
 
+    </div>
 
-  <p><strong>Bonus – vår låt:</strong><br>
+  </div>
 
-    <strong>You’re Still the One (Acoustic)</strong> – Jada Facer<br>
+</body>
 
-    <em>(men egentligen gångbart i precis alla versioner)</em>
-
-  </p>
-
-
-
-  <p><strong>Andra godbitar</strong> – både för att de påminner och bara för att:</p>
-
-  <ul>
-
-    <li>Tennessee – Hans Zimmer</li>
-
-    <li>A Thousand Years – Jasmine Thompson</li>
-
-    <li>Million Reasons – Lady Gaga</li>
-
-    <li>I Follow – Loi</li>
-
-    <li>Beauty in the Struggle – Bryan Martin</li>
-
-    <li>Something in the Orange – Micky</li>
-
-    <li>Always Remember Us This Way – Lady Gaga</li>
-
-    <li>Picture (feat. Sheryl Crow) – Kid Rock</li>
-
-  </ul>
-
-</div>
-
+</html>
