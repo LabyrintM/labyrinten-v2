@@ -4,7 +4,7 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <title>Spelet</title>
 
@@ -12,13 +12,17 @@
 
     body {
 
-      background-color: black;
+      background-color: white;
+
+      color: black;
+
+      font-family: sans-serif;
+
+      text-align: center;
 
       margin: 0;
 
       padding: 0;
-
-      overflow: hidden;
 
     }
 
@@ -26,11 +30,11 @@
 
       position: relative;
 
-      width: 100vw;
+      width: 100%;
 
       height: 100vh;
 
-      background-color: black;
+      overflow: hidden;
 
     }
 
@@ -38,13 +42,15 @@
 
       position: absolute;
 
-      top: 50%;
+      bottom: 100px;
 
       left: 50%;
 
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
 
-      height: 120px;
+      width: 50px;
+
+      transition: left 1s, bottom 0.5s;
 
     }
 
@@ -52,85 +58,77 @@
 
       position: absolute;
 
-      top: 50%;
+      bottom: 40px;
 
-      transform: translateY(-50%);
-
-      width: 60px;
-
-      height: 60px;
-
-      cursor: pointer;
-
-      opacity: 0.8;
+      width: 30px;
 
     }
 
-    #left-arrow {
+    #arrow-left {
 
-      left: 10%;
-
-    }
-
-    #right-arrow {
-
-      right: 10%;
+      left: 40%;
 
     }
 
-    .step-ring {
+    #arrow-right {
 
-      position: absolute;
+      right: 40%;
 
-      width: 100px;
+    }
 
-      height: 100px;
-
-      border: 3px solid white;
-
-      border-radius: 50%;
+    #circle {
 
       display: none;
 
+      position: absolute;
+
+      bottom: 120px;
+
+      right: 30%;
+
+      width: 40px;
+
+      height: 40px;
+
+      background-color: black;
+
+      border-radius: 50%;
+
     }
 
-    #ring-left-1 {
+    #message {
 
-      top: 50%;
-
-      left: 30%;
-
-      transform: translate(-50%, -50%);
-
-    }
-
-    .text-box {
+      display: none;
 
       position: absolute;
 
-      top: 35%;
+      top: 20%;
 
       left: 50%;
 
       transform: translateX(-50%);
 
-      background: rgba(255, 255, 255, 0.9);
+      background-color: rgba(0, 0, 0, 0.8);
 
-      color: black;
+      color: white;
 
-      padding: 15px 20px;
+      padding: 15px;
 
       border-radius: 10px;
 
-      font-family: Arial, sans-serif;
+      width: 60%;
+
+      font-size: 16px;
+
+    }
+
+    input, button {
+
+      margin-top: 20px;
 
       font-size: 18px;
 
-      display: none;
-
-      max-width: 400px;
-
-      text-align: center;
+      padding: 10px;
 
     }
 
@@ -142,21 +140,27 @@
 
   <div id="game-container">
 
-    <img id="mario" src="https://upload.wikimedia.org/wikipedia/en/a/a9/MarioNSMBUDeluxe.png" alt="Mario">
+    <img id="mario" src="https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png" alt="Mario" />
 
-    <img id="left-arrow" class="arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Arrow_left_font_awesome.svg/1024px-Arrow_left_font_awesome.svg.png" alt="Left Arrow">
+    <img id="arrow-left" class="arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/White_arrow_left.svg/1024px-White_arrow_left.svg.png" />
 
-    <img id="right-arrow" class="arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Arrow_right_font_awesome.svg/1024px-Arrow_right_font_awesome.svg.png" alt="Right Arrow">
+    <img id="arrow-right" class="arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/White_arrow_right.svg/1024px-White_arrow_right.svg.png" />
 
-    
+    <div id="circle"></div>
 
-    <div id="ring-left-1" class="step-ring"></div>
+    <div id="message">Din kropp larmar, den vet vad som saknas och kommer inte vila förrän den är åter där hjärtat hör hemma.</div>
 
-    <div id="text-box-left-1" class="text-box">
+  </div>
 
-      Din kropp larmar, den vet vad som saknas<br>och kommer inte vila förrän den är åter där hjärtat hör hemma.
 
-    </div>
+
+  <div>
+
+    <p>Vilken tid väcks du?</p>
+
+    <input type="text" id="answer" />
+
+    <button onclick="checkAnswer()">Svara</button>
 
   </div>
 
@@ -164,24 +168,33 @@
 
   <script>
 
-    const leftArrow = document.getElementById("left-arrow");
+    function checkAnswer() {
 
-    const ringLeft1 = document.getElementById("ring-left-1");
+      const input = document.getElementById("answer").value.trim().toLowerCase();
 
-    const textLeft1 = document.getElementById("text-box-left-1");
+      if (input === "kl fyra") {
 
+        document.getElementById("circle").style.display = "block";
 
+        setTimeout(() => {
 
-    leftArrow.addEventListener("click", () => {
+          document.getElementById("mario").style.left = "70%";
 
-      ringLeft1.style.display = "block";
+        }, 500);
 
-      textLeft1.style.display = "block";
+        setTimeout(() => {
 
-    });
+          document.getElementById("message").style.display = "block";
+
+        }, 1500);
+
+      }
+
+    }
 
   </script>
-<!-- test commit för att trigga Pages -->
+
 </body>
 
 </html>
+
