@@ -111,6 +111,104 @@ alert("Fel svar. Försök igen.");
     z-index: 1000;
 
   }
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Intro</title>
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      background-color: #fdf6f0; /* ljus sepia-ton */
+
+      overflow: hidden;
+
+      height: 100vh;
+
+    }
+
+
+
+    .falling-feather {
+
+      position: absolute;
+
+      top: -100px;
+
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: 60px;
+
+      cursor: pointer;
+
+      animation: fall 8s ease-in-out forwards;
+
+    }
+
+
+
+    @keyframes fall {
+
+      0% {
+
+        top: -100px;
+
+        transform: translateX(-50%) rotate(0deg);
+
+        opacity: 0;
+
+      }
+
+      50% {
+
+        opacity: 1;
+
+      }
+
+      100% {
+
+        top: 75%;
+
+        transform: translateX(-50%) rotate(720deg);
+
+        opacity: 1;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- Klickbar fjäder som öppnar fjäder.html -->
+
+  <a href="fjäder.html">
+
+    <img src="bilder/bild700.jpeg" alt="Fjäder" class="falling-feather">
+
+  </a>
+
+
+
+</body>
+
+</html>
+
 
 </style>
 
