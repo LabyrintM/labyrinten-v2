@@ -261,19 +261,191 @@
 
 
 
+
+
+
+
+<style>
+
+  .bubble-container {
+
+    text-align: center;
+
+    margin-top: 120px;
+
+    margin-bottom: 120px;
+
+    position: relative;
+
+  }
+
+
+
+  .bubble-image {
+
+    width: 180px;
+
+    cursor: pointer;
+
+  }
+
+
+
+  .speech-bubble {
+
+    display: none;
+
+    position: absolute;
+
+    top: -160px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 320px;
+
+    padding: 18px;
+
+    background-color: white;
+
+    border: 3px solid black;
+
+    border-radius: 20px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 16px;
+
+    box-shadow: 3px 3px 0 black;
+
+    line-height: 1.4;
+
+    white-space: pre-wrap;
+
+    z-index: 10;
+
+  }
+
+
+
+  .speech-bubble::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 10px;
+
+    border-style: solid;
+
+    border-color: white transparent transparent transparent;
+
+    z-index: 11;
+
+  }
+
+
+
+  .speech-bubble::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -23px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 11px;
+
+    border-style: solid;
+
+    border-color: black transparent transparent transparent;
+
+    z-index: 10;
+
+  }
+
+</style>
+
+
+
+<div class="bubble-container">
+
+  <img src="bilder/bild5000.jpeg" class="bubble-image" onclick="toggleBubble()">
+
+  <div id="bubbleText" class="speech-bubble"></div>
+
+</div>
+
+
+
 <script>
 
-  function toggleBubble5000() {
+  const bubbleText = "Vi möttes när omständigheterna inte fanns för oss att finnas.\nMen jag kan inte säga hejdå till dig, för jag kommer alltid tro att vi var menat för något annat, något större än att för alltid bli två främlingar med minnen.";
 
-    const bubble = document.getElementById('bubble5000');
+  let isBubbleVisible = false;
 
-    bubble.style.display = (bubble.style.display === 'none') ? 'block' : 'none';
+  let textIndex = 0;
+
+  let typingInterval;
+
+
+
+  function toggleBubble() {
+
+    const bubble = document.getElementById("bubbleText");
+
+    if (!isBubbleVisible) {
+
+      bubble.innerText = "";
+
+      bubble.style.display = "block";
+
+      textIndex = 0;
+
+      typingInterval = setInterval(() => {
+
+        if (textIndex < bubbleText.length) {
+
+          bubble.innerText += bubbleText.charAt(textIndex);
+
+          textIndex++;
+
+        } else {
+
+          clearInterval(typingInterval);
+
+        }
+
+      }, 25); // Bokstav för bokstav-hastighet
+
+      isBubbleVisible = true;
+
+    } else {
+
+      clearInterval(typingInterval);
+
+      bubble.innerText = "";
+
+      bubble.style.display = "none";
+
+      isBubbleVisible = false;
+
+    }
 
   }
 
 </script>
-
-
 
 
 </div>
