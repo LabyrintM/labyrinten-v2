@@ -231,29 +231,14 @@
 
 
 </a>
-<!-- skrivmaskinbild med pratbubbla under sista raden, centrerad och betydligt mindre -->
 
-<div style="width: 100%; display: flex; justify-content: center; margin-top: 120px;">
+<div style="position: relative; width: fit-content; margin: 100px auto 0 auto;">
 
-  <div style="position: relative; display: inline-block; cursor: pointer;" onclick="toggleBubble5000()">
+  <img src="bild5000.jpeg" style="width: 250px; display: block; margin: 0 auto;" />
 
-    <img src="bild5000.jpeg" style="max-width: 80px; height: auto; display: block;">
+  <div id="bubble" style="display: none; position: absolute; top: -140px; left: 260px; max-width: 250px; padding: 10px 15px; background: white; border: 3px solid black; border-radius: 25px; font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 14px; line-height: 1.4; box-shadow: 3px 3px 0 black;">
 
-    <div id="bubble5000" style="display: none; position: absolute; top: -135px; left: 50%; transform: translateX(-50%);
-
-        background-color: white; border: 3px solid black; border-radius: 15px; padding: 12px; max-width: 280px;
-
-        font-family: sans-serif; font-size: 13px; box-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
-
-      Vi möttes när omständigheterna inte fanns för oss att finnas.<br>
-
-      Men jag kan inte säga hejdå till dig,<br>
-
-      för jag kommer alltid tro på att vi var menat för något annat,<br>
-
-      något större än att för alltid bli två främlingar med minnen.
-
-    </div>
+    <span id="bubbleText"></span>
 
   </div>
 
@@ -261,9 +246,61 @@
 
 
 
+<script>
+
+  const text = "Vi möttes när omständigheterna inte fanns för oss att finnas. Men jag kan inte säga hejdå till dig, för jag kommer alltid tro att vi var menat för något annat, något större än att för alltid bli två främlingar med enbart minnen.";
+
+  let i = 0;
+
+  const bubble = document.getElementById("bubble");
+
+  const bubbleText = document.getElementById("bubbleText");
+
+  let typing = false;
 
 
 
+  document.querySelector("img[src='bild5000.jpeg']").addEventListener("click", () => {
+
+    if (typing) return;
+
+    if (bubble.style.display === "none") {
+
+      bubble.style.display = "block";
+
+      bubbleText.textContent = "";
+
+      i = 0;
+
+      typing = true;
+
+      const interval = setInterval(() => {
+
+        if (i < text.length) {
+
+          bubbleText.textContent += text[i];
+
+          i++;
+
+        } else {
+
+          clearInterval(interval);
+
+          typing = false;
+
+        }
+
+      }, 35);
+
+    } else {
+
+      bubble.style.display = "none";
+
+    }
+
+  });
+
+</script>
 
 
 
