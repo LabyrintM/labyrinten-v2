@@ -75,6 +75,51 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
 
     </div>
 
+
+  </div>
+
+</div>
+
+
+<br><br>
+<p><strong>Vill du prova?</strong><br>
+Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
+
+ <script>
+
+  function checkAnswer(filename, correctAnswer, questionText) {
+
+    var answer = prompt(questionText);
+
+    if (answer && answer.toLowerCase().trim() === correctAnswer.toLowerCase()) {
+
+      window.location.href = filename;
+
+    } else {
+
+      alert("Fel svar. Försök igen!");
+
+    }
+
+  }
+
+</script>
+<!-- Hjärtat -->
+
+<a href="avsked.html" style="position:fixed; top:130px; right:10px; font-size:48px; z-index:10;">❤️</a>
+
+
+
+<!-- Svampen -->
+
+<a href="obs.html" style="position:fixed; top:190px; right:10px; z-index:10;">
+
+  <img src="svamp.gif" alt="Svamp" style="height:48px; cursor:pointer;">
+
+</a>
+
+
+
     <script>
 
       const ikon = document.getElementById("ikon");
@@ -126,52 +171,6 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
       });
 
     </script>
-
-  </div>
-
-</div>
-
-
-<br><br>
-<p><strong>Vill du prova?</strong><br>
-Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
-
- <script>
-
-  function checkAnswer(filename, correctAnswer, questionText) {
-
-    var answer = prompt(questionText);
-
-    if (answer && answer.toLowerCase().trim() === correctAnswer.toLowerCase()) {
-
-      window.location.href = filename;
-
-    } else {
-
-      alert("Fel svar. Försök igen!");
-
-    }
-
-  }
-
-</script>
-<!-- Hjärtat -->
-
-<a href="avsked.html" style="position:fixed; top:130px; right:10px; font-size:48px; z-index:10;">❤️</a>
-
-
-
-<!-- Svampen -->
-
-<a href="obs.html" style="position:fixed; top:190px; right:10px; z-index:10;">
-
-  <img src="svamp.gif" alt="Svamp" style="height:48px; cursor:pointer;">
-
-</a>
-
-
-
-
 
 </body>
 </html>
