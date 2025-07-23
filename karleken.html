@@ -231,77 +231,7 @@
 
 
 </a>
-<div style="text-align: center; margin-top: 40px; position: relative;">
 
-  <img src="bild5000.jpeg" id="skrivmaskin" style="width: 300px; cursor: pointer;">
-
-
-
-  <div id="pratbubbla" style="display: none; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); max-width: 80%; padding: 15px 20px; border: 3px solid black; background: white; font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 16px; border-radius: 15px; box-shadow: 4px 4px 0 black;"></div>
-
-</div>
-
-
-
-<script>
-
-  const text = "Vi möttes när omständigheterna inte fanns för oss att finnas. Men jag kan inte säga hejdå till dig, för jag kommer alltid tro på att vi var menat för något annat, något större än att för alltid bli två främlingar med minnen.";
-
-  const bubblan = document.getElementById("pratbubbla");
-
-  const maskinen = document.getElementById("skrivmaskin");
-
-
-
-  let visad = false;
-
-  let index = 0;
-
-  let skrivning;
-
-
-
-  function skrivText() {
-
-    if (index <= text.length) {
-
-      bubblan.innerHTML = text.slice(0, index);
-
-      index++;
-
-      skrivning = setTimeout(skrivText, 25);
-
-    }
-
-  }
-
-
-
-  maskinen.addEventListener("click", () => {
-
-    if (!visad) {
-
-      bubblan.style.display = "block";
-
-      index = 0;
-
-      skrivText();
-
-    } else {
-
-      bubblan.style.display = "none";
-
-      bubblan.innerHTML = "";
-
-      clearTimeout(skrivning);
-
-    }
-
-    visad = !visad;
-
-  });
-
-</script>
 
 
 </div>
