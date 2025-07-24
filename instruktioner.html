@@ -63,6 +63,15 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
 <li><a href="#" onclick="checkAnswer('min-micke.html', 'enligt mig', 'Vad brukar du lägga till när du ska berätta hur du känner?')">Min Micke</a></li>
 <li><a href="#" onclick="checkAnswer('framtiden.html', 'trots allt', 'Johanna sa faktiskt och du sa?')">Framtiden</a></li>
 </ol>
+  <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+
+  <img src="bilder/bild5000.jpeg" alt="Skrivmaskin" style="width: 120px; cursor: pointer; margin-bottom: 10px; margin-bottom 10px;" id="skrivmaskin">
+<div id="pratbubbla" style="display: none; position: absolute; top: -160px; left: 130px; max-width: 300px; padding: 10px; background: white; border: 2px solid black; border-radius: 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.3); font-family: sans-serif; font-size: 14px;">
+
+  <span id="prattext"></span>
+
+</div>
+</div>
 <div style="display: flex; align-items: flex-start; margin-top: 10px;">
 
   <div style="flex: 1;"></div>
@@ -121,60 +130,53 @@ Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
   <img src="svamp.gif" alt="Svamp" style="height:48px; cursor:pointer;">
 
 </a>
+<script>
 
 
 
-    <script>
-
-      const ikon = document.getElementById("ikon");
-
-      const pratbubbla = document.getElementById("pratbubbla");
-
-      const text = "Vi möttes när omständigheterna inte fanns för oss att finnas. Men jag kan inte säga hejdå till dig, för jag kommer alltid tro på att vi var menat för något helt annat, något större än att för alltid bli två främlingar med minnen.";
-
-      let aktiv = false;
+const text = "Vi möttes när omständigheterna inte fanns för oss att finnas.\nMen jag kan inte säga hejdå till dig, för jag kommer alltid tro att vi var menat för något annat, något större än att bli två främlingar enbart med minnen.";
 
 
 
-      ikon.addEventListener("click", () => {
+let aktiv = false;
 
-        if (aktiv) {
 
-          pratbubbla.style.display = "none";
 
-          aktiv = false;
+ikon.addEventListener("click", () => {
 
-        } else {
+  if (aktiv) {
 
-          pratbubbla.textContent = "";
+    pratbubbla.style.display = "none";
 
-          pratbubbla.style.display = "block";
+    aktiv = false;
 
-          let i = 0;
+  } else {
 
-          const interval = setInterval(() => {
+    pratbubbla.style.display = "block";
 
-            if (i < text.length) {
+    pratbubbla.textContent = text;
 
-              pratbubbla.textContent += text.charAt(i);
+    aktiv = true;
 
-              i++;
+  }
 
-            } else {
+});
 
-              clearInterval(interval);
 
-            }
+    } else {
 
-          }, 30);
+      pratbubbla.style.display = "none";
 
-          aktiv = true;
+    }
 
-        }
+  });
 
-      });
+</script>
 
-    </script>
+
+
+
+   
 
 </body>
 </html>
