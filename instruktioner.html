@@ -65,7 +65,7 @@ Allt det du kanske inte kunnat ta in – men som nu finns här, tillgängligt, i
 </ol>
   <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
 
-  <img src="bild5000.jpeg" id="typewriter" oneclick="ikon.click" style="width: 120px; cursor: pointer; margin-bottom: 10px; margin-bottom 10px;" id="skrivmaskin">
+  <img src="bild5000.jpeg" id="typewriter" oneclick="toggleBubble()" style="width: 120px; cursor: pointer; margin-bottom: 10px; margin-bottom 10px;" id="skrivmaskin">
 <div id="pratbubbla" style="display: none; position: absolute; top: -160px; left: 130px; max-width: 300px; padding: 10px; background: white; border: 2px solid black; border-radius: 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.3); font-family: sans-serif; font-size: 14px;">
 
   <span id="prattext"></span>
@@ -129,10 +129,10 @@ Tryck på ett rumsnamn i listan ovan – så får du en gåta.</p>
 </a>
 <script>
 
-
 const ikon = document.getElementById("typewriter");
 
 const pratbubbla = document.getElementById("pratbubbla");
+
 const text = "Vi möttes när omständigheterna inte fanns för oss att finnas.\nMen jag kan inte säga hejdå till dig, för jag kommer alltid tro att vi var menat för något annat, något större än att bli två främlingar enbart med minnen.";
 
 
@@ -161,16 +161,9 @@ ikon.addEventListener("click", () => {
 
 });
 
-
-    } else {
-
-      pratbubbla.style.display = "none";
-
-    }
-
-  });
-
 </script>
+
+
 
 
 
